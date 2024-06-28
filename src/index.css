@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url(/fonts/Roboto.woff2) format("woff2");
+  }
+}
+body {
+  @apply bg-wBackground text-wText;
+}
+
+.dark body {
+  @apply bg-dBackground text-dText;
+}
+
+a {
+  opacity: 0.8;
+  font-weight: 500;
+}
+a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
