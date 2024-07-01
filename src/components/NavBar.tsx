@@ -21,7 +21,7 @@ function NavBar() {
         <a href="https://www.linkedin.com/in/carlo-aavekukk-22b92b1b2/">Carlo</a>
       </div>
       <div>
-        <a href="https://www.linkedin.com/in/carlo-aavekukk-22b92b1b2/">Content</a>
+        <a href="/home">Content</a>
         <button onClick={toggleTheme} className="ml-4 p-2 bg-gray-200 dark:bg-gray-800 dark:text-gray-200">
           {theme === "dark" ? "Light Mode" : "Dark Mode"}
         </button>
