@@ -1,9 +1,7 @@
 import { Canvas } from "@react-three/fiber";
 import { useGLTF, PresentationControls } from "@react-three/drei";
-import { useControls } from "leva";
 function LandingHeader() {
-  const earth = useGLTF("./building.glb");
-  const { lightX, lightY, lightZ } = useControls({ lightX: 1, lightY: 1, lightZ: 1 });
+  const model = useGLTF("./room.glb");
   return (
     <>
       <div className="grid grid-cols-2">
@@ -12,14 +10,14 @@ function LandingHeader() {
           <p>My name is Carlo Aavekukk. I am a front end developer for 7+ years. This is my portfolio website. Designed to showcase my work and my skills.</p>
         </div>
         <div className="bg-wBackground w-full h-[800px]">
-          <Canvas flat dpr={[1, 2]} camera={{ fov: 25, position: [0, 0, 8] }}>
+          <Canvas flat dpr={[1, 2]} camera={{ fov: 25, position: [0, 0, 8] }} shadows>
             <color attach="background" args={["#020c1a"]} />
-            <ambientLight />
+            <ambientLight intensity={2} />
             <PresentationControls snap global zoom={0.8} rotation={[0, -Math.PI / 4, 0]} polar={[0, Math.PI / 4]} azimuth={[-Math.PI / 4, Math.PI / 4]}>
-              <directionalLight position={[lightX, lightY, lightZ]} color={0xffff00} intensity={5} />
-
-              <group position={[0, -1, 0]} scale={0.3} dispose={null}>
-                <primitive object={earth.scene} />
+              <pointLight position={[0, 1, 0]} color={0xffffff} intensity={10} />
+              <spotLight position={[-2, 0, 1]} color={0xffffff} intensity={25} />
+              <group position={[0, -1, 0]} dispose={null}>
+                <primitive object={model.scene} />
               </group>
             </PresentationControls>
           </Canvas>
