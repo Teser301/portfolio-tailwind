@@ -1,12 +1,11 @@
 import NavBar from "./components/NavBar";
-import LandingHeader from "./components/LandingHeader";
-import LandingBody from "./components/LandingBody";
+import LandingPage from "./pages/LandingPage";
+
 function App() {
   return (
     <>
       <NavBar />
-      <LandingHeader />
-      <LandingBody />
+      <LandingPage />
     </>
   );
 }
