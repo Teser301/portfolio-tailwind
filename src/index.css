@@ -11,13 +11,6 @@
     src: url(/fonts/Roboto.woff2) format("woff2");
   }
 }
-body {
-  @apply bg-wBackground text-wText;
-}
-
-.dark body {
-  @apply bg-dBackground text-dText;
-}
 
 a {
   opacity: 0.8;

@@ -1,12 +1,18 @@
+import React from "react";
+import { router } from "./Routes/Routes.tsx";
+import { RouterProvider } from "react-router-dom";
 import NavBar from "./components/NavBar";
-import LandingPage from "./pages/LandingPage";
+import Footer from "./components/Footer.tsx";
 
 function App() {
   return (
-    <>
+    <div className="bg-gray-100 dark:bg-customGray">
       <NavBar />
-      <LandingPage />
-    </>
+      <React.StrictMode>
+        <RouterProvider router={router} />
+      </React.StrictMode>
+      <Footer />
+    </div>
   );
 }
 
