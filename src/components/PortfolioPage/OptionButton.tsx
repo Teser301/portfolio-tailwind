@@ -1,20 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
+import { FilterContext } from "../../context/FilterContext";
 
-interface OptionButtonProps {
-  viewOptions: string[];
-  viewOption: string;
-  handleViewOptionClick: (option: string) => void;
-}
+const OptionButton: React.FC = () => {
+  const { viewOption, setViewOption } = useContext(FilterContext)!; // Non-null assertion operator
+  const viewOptions = ["Year", "Company"];
 
-const OptionButton: React.FC<OptionButtonProps> = ({ viewOptions, viewOption, handleViewOptionClick }) => {
   return (
-    <div className="mb-6 flex justify-center space-x-4">
-      {viewOptions.map((option, index) => (
-        <button
-          key={index}
-          onClick={() => handleViewOptionClick(option)}
-          className={`px-4 py-2 rounded-lg ${viewOption === option ? "bg-blue-600 text-white" : "bg-gray-200 text-gray-800"} hover:bg-blue-500 transition`}
-        >
+    <div className="mb-4">
+      {viewOptions.map((option) => (
+        <button key={option} className={`px-4 py-2 rounded mr-2 ${viewOption === option ? "bg-blue-500 text-white" : "bg-gray-200"}`} onClick={() => setViewOption(option)}>
           {option}
         </button>
       ))}

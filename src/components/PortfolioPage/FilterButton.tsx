@@ -1,23 +1,35 @@
-import React from "react";
+import React, { useContext } from "react";
+import { FilterContext } from "../../context/FilterContext";
 
-interface FilterButtonProps {
-  filters: string[];
-  activeFilter: string;
-  setActiveFilter: (filter: string) => void;
-}
+const FilterButton: React.FC = () => {
+  const { activeFilter, setActiveFilter } = useContext(FilterContext)!;
 
-const FilterButton: React.FC<FilterButtonProps> = ({ filters, activeFilter, setActiveFilter }) => {
+  const filters = ["All", "React", "PHP", "Handlebars"];
+
+  // Mapping of filters to their corresponding paragraph text
+  const filterDescriptions: Record<string, string> = {
+    All: "Showing all projects.",
+    React: "Displaying projects built with React.",
+    PHP: "Here are the projects developed using PHP.",
+    Handlebars: "These projects utilize Handlebars templates.",
+  };
+
   return (
-    <div className="mb-6 flex justify-center space-x-4">
-      {filters.map((filter, index) => (
+    <div className="mb-4">
+      {filters.map((filter) => (
         <button
-          key={index}
+          key={filter}
+          className={`px-4 py-2 rounded mr-2 ${
+            activeFilter === filter ? "bg-blue-500 text-white" : "bg-gray-200"
+          }`}
           onClick={() => setActiveFilter(filter)}
-          className={`px-4 py-2 rounded-lg ${activeFilter === filter ? "bg-blue-600 text-white" : "bg-gray-200 text-gray-800"} hover:bg-blue-500 transition`}
         >
           {filter}
         </button>
       ))}
+
+      {/* Paragraph that changes based on the active filter */}
+      <p className="mt-4">{filterDescriptions[activeFilter]}</p>
     </div>
   );
 };

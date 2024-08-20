@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import LandingPage from "../pages/LandingPage";
 import NotFound from "../pages/NotFound";
 import Portfolio from "../pages/Portfolio";
+import { FilterProvider, useFilter } from "../context/FilterContext";
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -9,7 +10,11 @@ export const router = createBrowserRouter([
   },
   {
     path: "/projects",
-    element: <Portfolio />,
+    element: (
+      <FilterProvider>
+        <Portfolio />
+      </FilterProvider>
+    ),
   },
   {
     path: "*",

@@ -25,7 +25,7 @@ function NavBar() {
         </a>
       </div>
       <div>
-        <a href="/home" className="text-black dark:text-white">
+        <a href="/projects" className="text-black dark:text-white">
           Content
         </a>
         <button onClick={toggleTheme} className="ml-4 p-2 text-black dark:text-white">
