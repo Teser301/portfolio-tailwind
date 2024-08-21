@@ -6,6 +6,7 @@ import { projects } from "../data/projectsData";
 import useGroupedProjects from "../hooks/useGroupedProjects";
 
 // Components
+import PortfolioIntroduction from "../components/PortfolioPage/PortfolioIntro";
 import FilterButton from "../components/PortfolioPage/FilterButton";
 import OptionButton from "../components/PortfolioPage/OptionButton";
 import ProjectList from "../components/PortfolioPage/ProjectList";
@@ -39,10 +40,11 @@ const Portfolio: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 p-6 flex flex-col">
+    <div className="min-h-screen bg-gray-100 dark:bg-gray-900 dark:text-white p-6 flex flex-col">
+      <PortfolioIntroduction />
       <FilterButton />
       <OptionButton />
-      <div className="flex-1 flex flex-col md:flex-row">
+      <div className="flex-1 gap-10 flex flex-col md:flex-row">
         <ProjectList
           groupedProjects={groupedProjects}
           expandedGroups={expandedGroups}

@@ -6,9 +6,15 @@ const OptionButton: React.FC = () => {
   const viewOptions = ["Year", "Company"];
 
   return (
-    <div className="mb-4">
+    <div className="flex my-4 justify-center">
       {viewOptions.map((option) => (
-        <button key={option} className={`px-4 py-2 rounded mr-2 ${viewOption === option ? "bg-blue-500 text-white" : "bg-gray-200"}`} onClick={() => setViewOption(option)}>
+        <button
+          key={option}
+          className={`px-4 py-2 rounded mr-2 ${
+            viewOption === option ? "bg-blue-500 text-white" : "bg-gray-200"
+          }`}
+          onClick={() => setViewOption(option)}
+        >
           {option}
         </button>
       ))}

@@ -1,5 +1,6 @@
 import React from "react";
 import { Project } from "../../types/project";
+
 interface ProjectDetailProps {
   selectedProject: Project | null;
 }
@@ -7,9 +8,8 @@ interface ProjectDetailProps {
 const ProjectDetail: React.FC<ProjectDetailProps> = ({ selectedProject }) => {
   return (
     <div
-      className={`flex-1 bg-white p-6 shadow-md rounded-lg flex flex-col justify-center h-full transition-opacity duration-500 ${
-        selectedProject ? "opacity-100" : "opacity-0"
-      }`}
+      className={`flex-1 bg-white p-6 shadow-md rounded-lg  flex-col justify-center h-full transition-opacity duration-500
+      hidden md:flex`} // Hide on mobile, show on md and larger screens
     >
       {selectedProject ? (
         <>
