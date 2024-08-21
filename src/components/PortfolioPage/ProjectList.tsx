@@ -33,7 +33,7 @@ const ProjectList: React.FC<ProjectListProps> = ({
                   key={projectIndex}
                   onMouseEnter={() => setSelectedProject(project)}
                   onClick={() => handleProjectClick(project.link)}
-                  className="relative p-4 bg-white dark:bg-gray-800 shadow-md rounded-lg cursor-pointer hover:bg-blue-100 dark:hover:bg-blue-700 transition"
+                  className="relative p-4 my-5 bg-white dark:bg-gray-800 shadow-md rounded-lg cursor-pointer hover:bg-blue-100 dark:hover:bg-blue-700 transition"
                 >
                   <h4 className="text-xl font-semibold text-gray-900 dark:text-gray-100">
                     {project.title}

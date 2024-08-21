@@ -40,11 +40,11 @@ const Portfolio: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 dark:bg-gray-900 dark:text-white p-6 flex flex-col">
+    <div className="min-h-screen bg-gray-100 dark:bg-gray-900 dark:text-white px-6 py-20 flex flex-col">
       <PortfolioIntroduction />
       <FilterButton />
       <OptionButton />
-      <div className="flex-1 gap-10 flex flex-col md:flex-row">
+      <div className="flex-1 gap-10 flex flex-col md:flex-row min-h-[400px] md:min-h-[600px]">
         <ProjectList
           groupedProjects={groupedProjects}
           expandedGroups={expandedGroups}

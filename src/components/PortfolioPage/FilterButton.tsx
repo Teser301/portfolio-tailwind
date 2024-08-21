@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import { FilterContext } from "../../context/FilterContext";
-
 import ReactLogo from "../../assets/icons/react.svg";
 import Wordpress from "../../assets/icons/wordpress.svg";
 import Handlebars from "../../assets/icons/handlebars.svg";
@@ -19,31 +18,33 @@ const filters = [
   {
     name: "PHP",
     icon: Wordpress,
-    description: "Here are the projects developed using PHP.",
+    description:
+      "Here are the projects developed using PHP, mainly with Wordpress",
   },
   {
     name: "Handlebars",
     icon: Handlebars,
-    description: "These projects utilize Handlebars templates.",
+    description:
+      "These projects utilize Handlebars templates, mainly for BigCommerce",
   },
 ];
 
 const FilterButton: React.FC = () => {
   const { activeFilter, setActiveFilter } = useContext(FilterContext)!;
+
   return (
     <>
       <div className="flex gap-4 my-4 justify-center">
         {filters.map((filter) => (
           <button
             key={filter.name}
-            className={`px-4 py-2 rounded mr-2 transition-colors ${
+            className={`flex flex-col items-center justify-center px-4 py-2 rounded transition-colors duration-300 ease-in-out hover:bg-blue-100 dark:hover:bg-blue-600  ${
               activeFilter === filter.name
-                ? "bg-blue-500 text-white dark:bg-blue-400"
+                ? "bg-blue-500 text-white  dark:bg-blue-400"
                 : "bg-gray-200 dark:bg-gray-700 text-black dark:text-white"
             }`}
             onClick={() => setActiveFilter(filter.name)}
           >
-            {/* Render icon if available */}
             {filter.icon && (
               <img
                 src={filter.icon}
