@@ -8,8 +8,7 @@ interface ProjectDetailProps {
 const ProjectDetail: React.FC<ProjectDetailProps> = ({ selectedProject }) => {
   return (
     <div
-      className={`flex-1 bg-white p-6 shadow-md rounded-lg  flex-col justify-center h-full transition-opacity duration-500
-      hidden md:flex`} // Hide on mobile, show on md and larger screens
+      className={`hidden md:flex flex-1 bg-white dark:bg-gray-800 p-6 shadow-md rounded-lg flex-col justify-center h-full transition-opacity duration-500`}
     >
       {selectedProject ? (
         <>
@@ -18,19 +17,23 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ selectedProject }) => {
             alt={selectedProject.title}
             className="w-full h-64 object-cover rounded-md"
           />
-          <h2 className="text-2xl font-bold mt-4">{selectedProject.title}</h2>
-          <p className="mt-2 text-gray-600">{selectedProject.description}</p>
+          <h2 className="text-2xl font-bold mt-4 text-gray-800 dark:text-gray-200">
+            {selectedProject.title}
+          </h2>
+          <p className="mt-2 text-gray-600 dark:text-gray-400">
+            {selectedProject.description}
+          </p>
           <a
             href={selectedProject.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block mt-4 text-blue-600 hover:underline"
+            className="inline-block mt-4 text-blue-600 dark:text-blue-400 hover:underline"
           >
             View Project
           </a>
         </>
       ) : (
-        <p className="text-gray-500 text-center">
+        <p className="text-gray-500 dark:text-gray-300 text-center">
           Hover over a project to see its details.
         </p>
       )}

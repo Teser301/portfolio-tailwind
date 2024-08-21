@@ -1,5 +1,6 @@
 import React from "react";
 import { Project } from "../../types/project";
+
 interface ProjectListProps {
   groupedProjects: { group: string; projects: Project[] }[];
   expandedGroups: string[];
@@ -21,7 +22,7 @@ const ProjectList: React.FC<ProjectListProps> = ({
         <li key={groupIndex}>
           <h3
             onClick={() => toggleGroup(group.group)}
-            className="text-2xl font-bold text-gray-700 mb-4 cursor-pointer hover:text-blue-600 transition"
+            className="text-2xl font-bold text-gray-800 dark:text-gray-200 mb-4 cursor-pointer hover:text-blue-600 dark:hover:text-blue-400 transition"
           >
             {group.group}
           </h3>
@@ -32,9 +33,9 @@ const ProjectList: React.FC<ProjectListProps> = ({
                   key={projectIndex}
                   onMouseEnter={() => setSelectedProject(project)}
                   onClick={() => handleProjectClick(project.link)}
-                  className="relative p-4 bg-white shadow-md rounded-lg cursor-pointer hover:bg-blue-100 transition"
+                  className="relative p-4 bg-white dark:bg-gray-800 shadow-md rounded-lg cursor-pointer hover:bg-blue-100 dark:hover:bg-blue-700 transition"
                 >
-                  <h4 className="text-xl font-semibold text-gray-800">
+                  <h4 className="text-xl font-semibold text-gray-900 dark:text-gray-100">
                     {project.title}
                   </h4>
                 </li>
