@@ -5,50 +5,58 @@ import ReactLogo from "../../assets/icons/react.svg";
 import Wordpress from "../../assets/icons/wordpress.svg";
 import Handlebars from "../../assets/icons/handlebars.svg";
 
+const filters = [
+  {
+    name: "All",
+    icon: null,
+    description: "Showing all projects.",
+  },
+  {
+    name: "React",
+    icon: ReactLogo,
+    description: "Displaying projects built with React.",
+  },
+  {
+    name: "PHP",
+    icon: Wordpress,
+    description: "Here are the projects developed using PHP.",
+  },
+  {
+    name: "Handlebars",
+    icon: Handlebars,
+    description: "These projects utilize Handlebars templates.",
+  },
+];
+
 const FilterButton: React.FC = () => {
   const { activeFilter, setActiveFilter } = useContext(FilterContext)!;
-
-  const filters = ["All", "React", "PHP", "Handlebars"];
-
-  const filterDescriptions: Record<string, string> = {
-    All: "Showing all projects.",
-    React: "Displaying projects built with React.",
-    PHP: "Here are the projects developed using PHP.",
-    Handlebars: "These projects utilize Handlebars templates.",
-  };
-
   return (
     <>
-      <div className="flex my-4 justify-center">
+      <div className="flex gap-4 my-4 justify-center">
         {filters.map((filter) => (
           <button
-            key={filter}
+            key={filter.name}
             className={`px-4 py-2 rounded mr-2 transition-colors ${
-              activeFilter === filter
+              activeFilter === filter.name
                 ? "bg-blue-500 text-white dark:bg-blue-400"
                 : "bg-gray-200 dark:bg-gray-700 text-black dark:text-white"
             }`}
-            onClick={() => setActiveFilter(filter)}
+            onClick={() => setActiveFilter(filter.name)}
           >
-            {filter === "React" && (
-              <img src={ReactLogo} alt="React" className="w-16 h-16 mb-2" />
-            )}
-            {filter === "PHP" && (
-              <img src={Wordpress} alt="Wordpress" className="w-16 h-16 mb-2" />
-            )}
-            {filter === "Handlebars" && (
+            {/* Render icon if available */}
+            {filter.icon && (
               <img
-                src={Handlebars}
-                alt="Handlebars"
+                src={filter.icon}
+                alt={filter.name}
                 className="w-16 h-16 mb-2"
               />
             )}
-            {filter}
+            {filter.name}
           </button>
         ))}
       </div>
       <p className="mt-4 text-center text-gray-700 dark:text-gray-300">
-        {filterDescriptions[activeFilter]}
+        {filters.find((filter) => filter.name === activeFilter)?.description}
       </p>
     </>
   );
