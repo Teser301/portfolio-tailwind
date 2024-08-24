@@ -6,7 +6,7 @@ import Footer from "./components/Footer.tsx";
 
 function App() {
   return (
-    <div className="bg-gray-100 dark:bg-customGray">
+    <div className="bg-gray-100 dark:bg-gray-900">
       <NavBar />
       <React.StrictMode>
         <RouterProvider router={router} />

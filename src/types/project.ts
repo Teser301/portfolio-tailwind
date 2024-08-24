@@ -6,4 +6,8 @@ export type Project = {
     type: string[];
     company: string;
     yearDate: string;
+    status: string;
+    features: string[];
+    bigFeatureTitle: string;
+    bigFeatureDescription: string;
 };

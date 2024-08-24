@@ -2,7 +2,7 @@ import React from "react";
 
 const PortfolioIntroduction: React.FC = () => {
   return (
-    <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md mb-6">
+    <div className=" rounded-lg ">
       <h1 className="text-2xl font-bold text-gray-800 dark:text-gray-200 mb-4">
         Welcome to My Portfolio
       </h1>
