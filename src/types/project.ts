@@ -7,7 +7,8 @@ export type Project = {
     company: string;
     yearDate: string;
     status: string;
+    statusDate: string | null;
     features: string[];
-    bigFeatureTitle: string;
-    bigFeatureDescription: string;
+    bigFeatureTitle: string | null;
+    bigFeatureDescription: string | null;
 };
