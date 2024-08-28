@@ -1,6 +1,6 @@
 import React from "react";
 import { Project } from "../../types/project";
-
+import { MdOpenInNew } from "react-icons/md";
 interface ProjectListProps {
   groupedProjects: { group: string; projects: Project[] }[];
   expandedGroups: string[];
@@ -32,12 +32,24 @@ const ProjectList: React.FC<ProjectListProps> = ({
                 <li
                   key={projectIndex}
                   onMouseEnter={() => setSelectedProject(project)}
-                  onClick={() => handleProjectClick(project.link)}
-                  className="relative p-4 my-5 bg-white dark:bg-gray-800 shadow-md rounded-lg cursor-pointer hover:bg-blue-100 dark:hover:bg-blue-700 transition"
+                  onClick={
+                    project.status.toLowerCase().includes("online")
+                      ? () => handleProjectClick(project.link)
+                      : undefined
+                  }
+                  className={`flex justify-between items-center relative p-4 my-5 bg-white dark:bg-gray-800 shadow-md rounded-lg transition hover:bg-blue-100 dark:hover:bg-blue-700
+                    ${
+                      project.status.toLowerCase().includes("online")
+                        ? "cursor-pointer "
+                        : "cursor-default"
+                    }`}
                 >
-                  <h4 className="text-xl font-semibold text-gray-900 dark:text-gray-100">
+                  <h4 className="text-xl  font-semibold text-gray-900 dark:text-gray-100">
                     {project.title}
                   </h4>
+                  {project.status.toLowerCase().includes("online") && (
+                    <MdOpenInNew />
+                  )}
                 </li>
               ))}
             </ul>
