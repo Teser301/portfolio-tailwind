@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
-import { FaMoon } from "react-icons/fa";
-import { FaSun } from "react-icons/fa";
+import { FaMoon, FaSun, FaHome } from "react-icons/fa"; // Import FaHome for the Home icon
 
 function NavBar() {
-  const [theme, setTheme] = useState(() => localStorage.getItem("theme") || "light");
+  const [theme, setTheme] = useState(
+    () => localStorage.getItem("theme") || "light"
+  );
 
   useEffect(() => {
     if (theme === "dark") {
@@ -17,18 +18,23 @@ function NavBar() {
   const toggleTheme = () => {
     setTheme(theme === "dark" ? "light" : "dark");
   };
+
   return (
     <header className="flex justify-between items-center p-5 w-full border-b-2 border-black dark:border-white border-b-dPrimary">
-      <div>
-        <a href="https://www.linkedin.com/in/carlo-aavekukk-22b92b1b2/" className="text-black dark:text-white">
-          Carlo
+      <div className="flex items-center">
+        <a href="/" className="text-black dark:text-white flex items-center">
+          <FaHome className="mr-2" /> {/* Home icon */}
+          Home
         </a>
       </div>
-      <div>
-        <a href="/projects" className="text-black dark:text-white">
-          Content
+      <div className="flex items-center">
+        <a href="/projects" className="text-black dark:text-white mr-4">
+          Portfolio {/* or 'Projects' if you prefer */}
         </a>
-        <button onClick={toggleTheme} className="ml-4 p-2 text-black dark:text-white">
+        <button
+          onClick={toggleTheme}
+          className="p-2 text-black dark:text-white"
+        >
           {theme === "dark" ? <FaSun /> : <FaMoon />}
         </button>
       </div>
