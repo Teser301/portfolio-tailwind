@@ -11,12 +11,12 @@ const LandingSkills = () => {
           {skills.map((skill, index) => (
             <div
               key={index}
-              className="flex flex-col items-center p-4 rounded-lg shadow-lg bg-white dark:bg-customGrayLight w-72 hover:bg-dPrimary hover:border-gray-400 transition duration-300"
+              className="flex flex-col items-center p-4 rounded-lg shadow-lg bg-white dark:bg-customGrayLight w-72 transition-all duration-300 transform hover:bg-dPrimary hover:shadow-2xl hover:scale-105 hover:rotate-1"
             >
               <img
                 src={skill.logo}
                 alt={skill.name}
-                className="w-16 h-16 mb-2"
+                className="w-16 h-16 mb-2 transition-transform duration-300 transform hover:scale-110"
               />
               <p className="text-lg font-medium text-black dark:text-white">
                 {skill.name}
