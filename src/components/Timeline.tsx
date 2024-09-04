@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { experiences } from "../../data/timelineData";
+import { experiences } from "../data/timelineData";
 
-function HorizontalTimeline() {
+function Timeline() {
   const [selectedExperience, setSelectedExperience] = useState(experiences[0]);
 
   return (
@@ -86,4 +86,4 @@ function HorizontalTimeline() {
   );
 }
 
-export default HorizontalTimeline;
+export default Timeline;

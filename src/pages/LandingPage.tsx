@@ -1,17 +1,30 @@
 import LandingHeader from "../components/LandingPage/LandingHeader";
-import LandingBody from "../components/LandingPage/LandingBody";
 import LandingPortfolio from "../components/LandingPage/LandingPortfolio";
-import LandingExperience from "../components/LandingPage/LandingExperience";
+import Timeline from "../components/Timeline";
 import LandingSkills from "../components/LandingPage/LandingSkills";
 import RecommendationCard from "../components/RecommendCard";
 function LandingPage() {
   return (
     <>
       <LandingHeader />
-      <LandingBody />
+      <div className="p-6">
+        <div className="mb-8">
+          <h1 className="text-3xl font-bold mb-4  text-black dark:text-white">
+            About
+          </h1>
+          <div className="relative pl-6">
+            <p className="pl-4 text-black dark:text-white">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Architecto fugiat, consequuntur itaque aliquid sapiente aut
+              laudantium neque atque, molestiae nobis dignissimos quia beatae
+              eligendi ducimus fugit, similique dolores! Iusto, mollitia?
+            </p>
+          </div>
+        </div>
+      </div>
       <LandingSkills />
       <LandingPortfolio />
-      <LandingExperience />
+      <Timeline />
       <RecommendationCard
         image="https://via.placeholder.com/150"
         name="Vincenzo Aglieri Rinella"
