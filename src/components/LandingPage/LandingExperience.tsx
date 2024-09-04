@@ -12,7 +12,7 @@ function HorizontalTimeline() {
           backgroundImage: `url(${selectedExperience.backgroundImage})`,
         }}
       ></div>
-      <div className="z-10 w-full max-w-4xl h-96  bg-white dark:bg-gray-800 shadow-md rounded-lg p-8 ">
+      <div className="z-10 w-full max-w-4xl  bg-white dark:bg-gray-800 shadow-md rounded-lg p-8 ">
         <h1 className="text-center text-2xl font-semibold mb-6 text-black dark:text-white">
           Experience Timeline
         </h1>
@@ -46,6 +46,9 @@ function HorizontalTimeline() {
           <h2 className="text-xl font-bold mb-2 text-black dark:text-white">
             {selectedExperience.title}
           </h2>
+          <h3 className="text-md font-bold mb-2 text-black dark:text-white">
+            {selectedExperience.company}
+          </h3>
           <p className="text-md mb-4 text-black dark:text-white">
             {selectedExperience.description}
           </p>
