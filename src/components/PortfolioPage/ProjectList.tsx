@@ -1,13 +1,7 @@
 import React from "react";
-import { Project } from "../../types/project";
+import { ProjectListProps } from "../../types/project";
+
 import { MdOpenInNew } from "react-icons/md";
-interface ProjectListProps {
-  groupedProjects: { group: string; projects: Project[] }[];
-  expandedGroups: string[];
-  toggleGroup: (group: string) => void;
-  handleProjectClick: (link: string) => void;
-  setSelectedProject: (project: Project | null) => void;
-}
 
 const ProjectList: React.FC<ProjectListProps> = ({
   groupedProjects,

@@ -13,3 +13,11 @@ export type Project = {
     bigFeatureTitle: string | null;
     bigFeatureDescription: string | null;
 };
+
+export type ProjectListProps = {
+    groupedProjects: { group: string; projects: Project[] }[];
+    expandedGroups: string[];
+    toggleGroup: (group: string) => void;
+    handleProjectClick: (link: string) => void;
+    setSelectedProject: (project: Project | null) => void;
+};
