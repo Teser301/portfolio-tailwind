@@ -1,4 +1,3 @@
-import React from "react";
 import VerticalTimeline from "../components/LandingPage/LandingExperience";
 function About() {
   return (

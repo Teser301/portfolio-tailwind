@@ -2,8 +2,6 @@ import { Timeline } from "../types/timeline";
 import ReactLogo from "../assets/icons/react.svg";
 import HTMLLogo from "../assets/icons/html5.svg";
 import JavaScriptLogo from "../assets/icons/javascript.svg";
-import PythonLogo from "../assets/icons/python.svg";
-import TailwindLogo from "../assets/icons/tailwind.svg";
 import WordpressLogo from "../assets/icons/wordpress.svg";
 
 export const experiences: Timeline[] = [
