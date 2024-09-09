@@ -1,6 +1,5 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
-import Button from "./Basic/Button";
+import Button from "../Basic/Button";
 const AboutMe: React.FC = () => {
   return (
     <div className="relative bg-gray-100 dark:bg-gray-800 p-12 md:p-24 rounded-lg shadow-lg mb-12">

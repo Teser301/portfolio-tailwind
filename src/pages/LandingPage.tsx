@@ -3,7 +3,7 @@ import LandingPortfolio from "../components/LandingPage/LandingPortfolio";
 import Timeline from "../components/Timeline";
 import LandingSkills from "../components/LandingPage/LandingSkills";
 import RecommendationCard from "../components/RecommendCard";
-import AboutMe from "../components/AboutMe";
+import AboutMe from "../components/LandingPage/AboutMe";
 
 function LandingPage() {
   return (
