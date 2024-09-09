@@ -38,9 +38,9 @@ const FilterButton: React.FC = () => {
         {filters.map((filter) => (
           <button
             key={filter.name}
-            className={`flex flex-col items-center justify-center px-4 py-2 rounded transition-colors duration-300 ease-in-out hover:bg-blue-100 dark:hover:bg-blue-600  ${
+            className={`flex flex-col items-center justify-center px-6 py-3 rounded-lg shadow-md transition-transform duration-200 transform hover:scale-105 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500 ${
               activeFilter === filter.name
-                ? "bg-blue-500 text-white  dark:bg-blue-400"
+                ? "bg-blue-600 text-white scale-105 dark:bg-blue-500"
                 : "bg-gray-200 dark:bg-gray-700 text-black dark:text-white"
             }`}
             onClick={() => setActiveFilter(filter.name)}
@@ -49,10 +49,10 @@ const FilterButton: React.FC = () => {
               <img
                 src={filter.icon}
                 alt={filter.name}
-                className="w-16 h-16 mb-2"
+                className="w-5 h-5 mb-1"
               />
             )}
-            {filter.name}
+            <span className="font-semibold">{filter.name}</span>
           </button>
         ))}
       </div>

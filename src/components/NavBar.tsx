@@ -23,13 +23,16 @@ function NavBar() {
     <header className="flex justify-between items-center p-5 w-full border-b-2 border-black dark:border-white border-b-dPrimary">
       <div className="flex items-center">
         <a href="/" className="text-black dark:text-white flex items-center">
-          <FaHome className="mr-2" /> {/* Home icon */}
+          <FaHome className="mr-2" />
           Home
         </a>
       </div>
       <div className="flex items-center">
         <a href="/projects" className="text-black dark:text-white mr-4">
-          Portfolio {/* or 'Projects' if you prefer */}
+          Projects
+        </a>
+        <a href="/about" className="text-black dark:text-white mr-4">
+          About
         </a>
         <button
           onClick={toggleTheme}

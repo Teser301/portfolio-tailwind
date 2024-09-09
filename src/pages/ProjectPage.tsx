@@ -6,11 +6,11 @@ import { projects } from "../data/projectsData";
 import useGroupedProjects from "../hooks/useGroupedProjects";
 
 // Components
-import PortfolioIntroduction from "../components/PortfolioPage/PortfolioIntro";
-import FilterButton from "../components/PortfolioPage/FilterButton";
-import OptionButton from "../components/PortfolioPage/OptionButton";
-import ProjectList from "../components/PortfolioPage/ProjectList";
-import ProjectDetail from "../components/PortfolioPage/ProjectDetail";
+import PortfolioIntroduction from "../components/ProjectPage/PortfolioIntro";
+import FilterButton from "../components/ProjectPage/FilterButton";
+import OptionButton from "../components/ProjectPage/OptionButton";
+import ProjectList from "../components/ProjectPage/ProjectList";
+import ProjectDetail from "../components/ProjectPage/ProjectDetail";
 
 const Portfolio: React.FC = () => {
   const { activeFilter, viewOption } = useFilter();
@@ -23,7 +23,7 @@ const Portfolio: React.FC = () => {
     viewOption
   );
 
-  // Update expandedGroups when viewOption changes or on mount
+  // Update expanded groups. Making the dropdown visible on page visit
   useEffect(() => {
     const groups = groupedProjects.map((group) => group.group);
     setExpandedGroups(groups);
@@ -42,8 +42,10 @@ const Portfolio: React.FC = () => {
   return (
     <div className="max-w-[1440px] mx-auto min-h-screen  dark:text-white px-6 py-5 flex flex-col">
       <PortfolioIntroduction />
-      <FilterButton />
-      <OptionButton />
+      <div className="bg-gray-800 my-5">
+        <FilterButton />
+        <OptionButton />
+      </div>
       <div className="flex-1 gap-10 flex flex-col md:flex-row min-h-[400px] md:min-h-[600px]">
         <ProjectList
           groupedProjects={groupedProjects}
