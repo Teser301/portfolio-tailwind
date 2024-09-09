@@ -40,8 +40,8 @@ const FilterButton: React.FC = () => {
             key={filter.name}
             className={`flex flex-col items-center justify-center px-6 py-3 rounded-lg shadow-md transition-transform duration-200 transform hover:scale-105 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500 ${
               activeFilter === filter.name
-                ? "bg-blue-600 text-white scale-105 dark:bg-blue-500"
-                : "bg-gray-200 dark:bg-gray-700 text-black dark:text-white"
+                ? "bg-blue-600 text-text scale-105 dark:bg-blue-500"
+                : "bg-gray-200 dark:bg-gray-700  text-text  "
             }`}
             onClick={() => setActiveFilter(filter.name)}
           >
@@ -56,7 +56,7 @@ const FilterButton: React.FC = () => {
           </button>
         ))}
       </div>
-      <p className="mt-4 text-center text-gray-700 dark:text-gray-300">
+      <p className="mt-4 text-center text-gray-700 dark: text-text">
         {filters.find((filter) => filter.name === activeFilter)?.description}
       </p>
     </>

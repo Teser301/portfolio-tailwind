@@ -59,7 +59,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ selectedProject }) => {
           )}
         </>
       ) : (
-        <p className="text-gray-500 dark:text-gray-300 text-center">
+        <p className="text-gray-500 dark: text-text text-center">
           Hover over a project to see its details.
         </p>
       )}

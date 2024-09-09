@@ -12,8 +12,8 @@ const OptionButton: React.FC = () => {
           key={option}
           className={`px-4 py-2 rounded mr-2 transition-colors ${
             viewOption === option
-              ? "bg-blue-500 text-white dark:bg-blue-400 dark:text-gray-900"
-              : "bg-gray-200 text-black dark:bg-gray-700 dark:text-white"
+              ? "bg-blue-500 text-text dark:bg-blue-400 dark:text-gray-900"
+              : "bg-gray-200  text-text dark:bg-gray-700  "
           }`}
           onClick={() => setViewOption(option)}
         >

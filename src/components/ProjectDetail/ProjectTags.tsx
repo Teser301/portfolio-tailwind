@@ -22,7 +22,7 @@ const ProjectTags: React.FC<ProjectTagsProps> = ({ tags }) => {
           key={index}
           className={`text-xs font-medium px-2.5 py-0.5 rounded ${
             tagStyles[tag.toLowerCase()] ||
-            "bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-300"
+            "bg-gray-100 text-gray-800 dark:bg-gray-700 dark: text-text"
           }`}
         >
           {tag}

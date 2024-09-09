@@ -20,24 +20,21 @@ function NavBar() {
   };
 
   return (
-    <header className="flex justify-between items-center p-5 w-full border-b-2 border-black dark:border-white border-b-dPrimary">
+    <header className="fixed flex justify-between items-center p-5 w-full bg-background shadow-md z-50">
       <div className="flex items-center">
-        <a href="/" className="text-black dark:text-white flex items-center">
+        <a href="/" className=" text-text flex items-center">
           <FaHome className="mr-2" />
           Home
         </a>
       </div>
       <div className="flex items-center">
-        <a href="/projects" className="text-black dark:text-white mr-4">
+        <a href="/projects" className=" text-text mr-4">
           Projects
         </a>
-        <a href="/about" className="text-black dark:text-white mr-4">
+        <a href="/about" className=" text-text mr-4">
           About
         </a>
-        <button
-          onClick={toggleTheme}
-          className="p-2 text-black dark:text-white"
-        >
+        <button onClick={toggleTheme} className="p-2 text-text">
           {theme === "dark" ? <FaSun /> : <FaMoon />}
         </button>
       </div>

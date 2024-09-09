@@ -14,7 +14,7 @@ const Button: React.FC<ButtonProps> = ({
         href={href}
         target={target}
         rel={target === "_blank" ? "noopener noreferrer" : undefined}
-        className={`inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ${className}`}
+        className={`inline-block bg-blue-600 hover:bg-blue-700 text-light font-bold py-2 px-4 rounded ${className}`}
       >
         {text}
       </a>
@@ -24,7 +24,7 @@ const Button: React.FC<ButtonProps> = ({
   return (
     <button
       onClick={onClick}
-      className={`bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ${className}`}
+      className={`bg-blue-600 hover:bg-blue-700 text-light font-bold py-2 px-4 rounded ${className}`}
     >
       {text}
     </button>

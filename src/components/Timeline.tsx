@@ -13,7 +13,7 @@ function Timeline() {
         }}
       ></div>
       <div className="z-10 w-full max-w-4xl bg-white dark:bg-gray-800 shadow-md rounded-lg p-8">
-        <h1 className="text-center text-2xl font-semibold mb-6 text-black dark:text-white">
+        <h1 className="text-center text-2xl font-semibold mb-6  text-text  ">
           Experience Timeline
         </h1>
 
@@ -33,7 +33,7 @@ function Timeline() {
                     : "bg-white dark:bg-gray-700 border-white dark:border-gray-800"
                 }`}
               ></div>
-              <span className="absolute mt-2 text-xs font-medium text-gray-700 dark:text-gray-300 transform -translate-y-full top-11">
+              <span className="absolute mt-2 text-xs font-medium text-gray-700 dark: text-text transform -translate-y-full top-11">
                 {exp.year}
               </span>
             </div>
@@ -41,13 +41,13 @@ function Timeline() {
         </div>
 
         <div className="mt-4 text-center max-w-2xl mx-auto">
-          <h2 className="text-xl font-bold mb-2 text-black dark:text-white">
+          <h2 className="text-xl font-bold mb-2  text-text  ">
             {selectedExperience.title}
           </h2>
           <h3 className="text-md font-bold mb-2 text-gray-700 dark:text-gray-400">
             {selectedExperience.company}
           </h3>
-          <p className="text-md mb-4 text-gray-600 dark:text-gray-300">
+          <p className="text-md mb-4 text-gray-600 dark: text-text">
             {selectedExperience.description}
           </p>
         </div>
@@ -68,11 +68,11 @@ function Timeline() {
                       className="w-6 h-6 mr-2"
                     />
                   )}
-                  <h4 className="text-md font-semibold text-gray-800 dark:text-white">
+                  <h4 className="text-md font-semibold text-gray-800  ">
                     {achievement.title}
                   </h4>
                 </div>
-                <p className="text-sm text-gray-700 dark:text-gray-300">
+                <p className="text-sm text-gray-700 dark: text-text">
                   {achievement.content}
                 </p>
               </div>

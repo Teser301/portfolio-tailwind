@@ -2,8 +2,7 @@ import React from "react";
 import Button from "../Basic/Button";
 const AboutMe: React.FC = () => {
   return (
-    <div className="relative bg-gray-100 dark:bg-gray-800 p-12 md:p-24 rounded-lg shadow-lg mb-12">
-      <div className="absolute inset-0 bg-black opacity-30 rounded-lg"></div>
+    <div className="relative  p-12 md:p-24 ">
       <div className="relative z-10 flex flex-col md:flex-row items-center justify-center">
         <img
           src="https://via.placeholder.com/300"
@@ -11,12 +10,12 @@ const AboutMe: React.FC = () => {
           className="w-64 h-64 md:w-80 md:h-80 object-cover rounded-lg mb-6 md:mb-0 md:mr-8"
         />
         <div className="text-center md:text-left">
-          <h1 className="text-5xl font-bold text-white mb-6">About Me</h1>
-          <p className="text-2xl text-gray-200 mb-4">
-            Hi, I'm <span className="font-semibold">Carlo Aavekukk</span>, a
+          <h1 className="text-5xl font-bold text-primary mb-6">About Me</h1>
+          <p className="text-2xl text-primary mb-4">
+            Hi, I'm <span className="font-semibold ">Carlo Aavekukk</span>, a
             passionate Front-End Developer.
           </p>
-          <p className="text-lg text-gray-300 mb-8">
+          <p className="text-lg text-text mb-8">
             I have been a developer for over 5+ years, focusing on front-end
             development with expertise in technologies like React, PHP, and
             modern CSS frameworks. I enjoy coding and all its technicalities and

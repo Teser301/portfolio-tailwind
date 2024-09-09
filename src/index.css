@@ -3,6 +3,24 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --text: #092011;
+    --background: #d8dfee;
+    --primary: #3dc26e;
+    --secondary: #8bdaa7;
+    --accent: #60d288;
+    --dark: #092011;
+    --light: #dff6e7;
+  }
+  .dark {
+    --text: #dff6e7;
+    --background: #111827;
+    --primary: #3dc26e;
+    --secondary: #257441;
+    --accent: #2d9f55;
+    --dark: #092011;
+    --light: #dff6e7;
+  }
   @font-face {
     font-family: "Roboto";
     font-style: normal;
