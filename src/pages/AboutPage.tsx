@@ -1,45 +1,31 @@
-import VerticalTimeline from "../components/Timeline";
+import Timeline from "../components/Timeline";
+import AboutContent from "../components/AboutPage/AboutContent";
+
 function About() {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100 dark:bg-gray-900">
-      <div className="max-w-4xl w-full bg-white dark:bg-gray-800 shadow-md rounded-lg p-8">
-        <div className="flex flex-col md:flex-row items-center md:items-start">
-          {/* Profile Image */}
-          <div className="flex-shrink-0">
-            <img
-              src="https://via.placeholder.com/150"
-              alt="Profile"
-              className="rounded-full w-32 h-32 md:w-48 md:h-48 mb-4 md:mb-0 md:mr-6 shadow-lg"
-            />
-          </div>
+      <AboutContent
+        title="About Me"
+        imgSrc="https://via.placeholder.com/150"
+        description="Hi, I'm Carlo, a passionate front-end developer with a deep interest in technology and software. My journey has been fueled by curiosity and determination to learn every aspect of the field. While my education laid the foundation, most of what I know is self-taught, which admitedly is a struggle. I thrive more under deadlines and external expectations, as I find I work best when tackling real-world tasks, especially those with tight timelines."
+      />
 
-          {/* About Me Content */}
-          <div>
-            <h1 className="text-3xl font-bold mb-4 text-center md:text-left text-gray-800 dark:text-gray-100">
-              About Me
-            </h1>
-            <p className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed mb-4">
-              Hi, I'm [Your Name], a passionate developer with a love for
-              creating beautiful, functional, and user-friendly web
-              applications. With a background in [Your Background], I specialize
-              in [Your Specializations]. My goal is to continuously grow as a
-              developer and create products that not only meet but exceed client
-              expectations.
-            </p>
-            <p className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed mb-4">
-              When I'm not coding, you can find me [Your Hobbies/Interests]. I
-              believe in lifelong learning and am always looking to expand my
-              skill set and take on new challenges.
-            </p>
-            <p className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed">
-              Feel free to check out my portfolio, and don't hesitate to reach
-              out if you'd like to collaborate on a project or just chat about
-              tech!
-            </p>
-          </div>
-        </div>
-      </div>
-      <VerticalTimeline />
+      <AboutContent
+        title="Biography"
+        description="I was born in Tallinn, Estonia, and have always been surrounded by technology. From getting my first computer at the age of 7 to mastering the art of 'Googling' by age 9, tech has been a constant presence in my life. Despite my early interest, I never thought I'd pursue a career in programming. However, after sitting in a programming course at Tallinn Polytechnic, it became a turning point for me. It made me realize how simple this all is to me and watching my fellow students struggle with concepts like binary or AND/OR signals made me realize that this is my purpose. So, I immediately got into a internship at Webshark after re-rolling my course to Multimedia. You can see more of it in my timeline."
+      />
+
+      <Timeline />
+
+      <AboutContent
+        title="Hobbies"
+        description="I think like most people, we enjoy surrounding ourselves in new and exciting hobbies, at least this is the case of me as I want to basically 'learn' everything, but we don't have all the time in the world, so my hobbies won't surprise you. As you'd expect, Coding is one of them. I spend my time either building web projects to suit my needs or work on game projects so that I can learn real coding. Other hobbies also include drawing, mostly in digital media. I also have a few smaller hobbies I try to keep track of, such as 3D modeling and to a lesser extent, making music (though not much is done on that front)."
+      />
+
+      <AboutContent
+        title="Future Goals"
+        description="While front-end development is my current focus, I want to deepen my expertise in more complex areas of programming. Front-end work is rewarding but can sometimes feel straightforward. I'd like to solve challenges rather than build the same UI over and over. There's a unique satisfaction in tackling difficult tasks and seeing them through to completion, and that's the path I want to explore."
+      />
     </div>
   );
 }
