@@ -3,6 +3,7 @@ import { Project } from "../../types/project";
 import ProjectFeatures from "./ProjectDetail/ProjectFeatures";
 import ProjectStatus from "./ProjectDetail/ProjectStatus";
 import ProjectTags from "./ProjectDetail/ProjectTags";
+
 interface ProjectDetailProps {
   selectedProject: Project | null;
 }
@@ -10,7 +11,7 @@ interface ProjectDetailProps {
 const ProjectDetail: React.FC<ProjectDetailProps> = ({ selectedProject }) => {
   return (
     <div
-      className={`hidden md:flex flex-1 bg-white dark:bg-gray-800 p-6 shadow-md rounded-lg flex-col justify-center h-full transition-opacity duration-500`}
+      className={`hidden md:flex flex-1 bg-white dark:bg-gray-800 p-6 shadow-md rounded-lg flex-col justify-start h-screen transition-opacity duration-500 overflow-y-auto`}
     >
       {selectedProject ? (
         <>
@@ -19,11 +20,13 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ selectedProject }) => {
             alt={selectedProject.title}
             className="w-full h-96 object-cover object-top rounded-md"
           />
-          <ProjectStatus status={selectedProject.status} />
+          <ProjectStatus
+            status={selectedProject.status}
+            link={selectedProject.link}
+          />
           <h2 className="text-2xl font-bold mt-4 text-gray-800 dark:text-gray-200">
             {selectedProject.title}
           </h2>
-          {/* Tags */}
           <ProjectTags tags={selectedProject.type} />
           <ProjectFeatures features={selectedProject.features} />
           <div>
@@ -35,7 +38,6 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ selectedProject }) => {
             </p>
           </div>
 
-          {/* Big Feature */}
           {selectedProject.bigFeatureTitle &&
             selectedProject.bigFeatureDescription && (
               <div className="mt-2">
@@ -47,19 +49,9 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ selectedProject }) => {
                 </p>
               </div>
             )}
-          {selectedProject.status.toLowerCase().includes("online") && (
-            <a
-              href={selectedProject.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block mt-4 text-blue-600 dark:text-blue-400 hover:underline"
-            >
-              View Project
-            </a>
-          )}
         </>
       ) : (
-        <p className="text-gray-500 dark: text-text text-center">
+        <p className="text-gray-500 dark:text-text text-center">
           Hover over a project to see its details.
         </p>
       )}
