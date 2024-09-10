@@ -6,7 +6,7 @@ import { projects } from "../data/projectsData";
 import useGroupedProjects from "../hooks/useGroupedProjects";
 
 // Components
-import PortfolioIntroduction from "../components/ProjectPage/PortfolioIntro";
+import ProjectIntro from "../components/ProjectPage/ProjectIntro";
 import FilterButton from "../components/ProjectPage/FilterButton";
 import OptionButton from "../components/ProjectPage/OptionButton";
 import ProjectList from "../components/ProjectPage/ProjectList";
@@ -41,8 +41,8 @@ const Portfolio: React.FC = () => {
 
   return (
     <div className="max-w-[1440px] mx-auto min-h-screen    px-6 py-5 flex flex-col">
-      <PortfolioIntroduction />
-      <div className="bg-gray-800 my-5">
+      <div className="bg-white dark:bg-gray-800 my-5 p-8">
+        <ProjectIntro />
         <FilterButton />
         <OptionButton />
       </div>
