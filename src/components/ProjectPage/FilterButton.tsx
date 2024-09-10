@@ -6,11 +6,11 @@ const FilterButton: React.FC = () => {
   const { activeFilter, setActiveFilter } = useContext(FilterContext)!;
   return (
     <>
-      <div className="flex gap-4 my-4 justify-center">
+      <div className="flex gap-4 my-4 ">
         {filters.map((filter) => (
           <button
             key={filter.name}
-            className={`flex gap-2 items-center justify-center px-6 py-3 rounded-lg shadow-md transition-transform duration-200 transform hover:scale-105 hover:shadow-lg text-text ${
+            className={`flex gap-2 items-center  px-6 py-3 rounded-lg shadow-md transition-transform duration-200 transform hover:scale-105 hover:shadow-lg text-text ${
               activeFilter === filter.name
                 ? "bg-primary  scale-105 dark:bg-secondary"
                 : "bg-gray-200 dark:bg-gray-700 text-text"
@@ -28,7 +28,7 @@ const FilterButton: React.FC = () => {
           </button>
         ))}
       </div>
-      <p className="mt-4 text-center text-gray-700 dark: text-text">
+      <p className="mt-4 text-gray-700 dark: text-text">
         {filters.find((filter) => filter.name === activeFilter)?.description}
       </p>
     </>
