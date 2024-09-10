@@ -29,7 +29,7 @@ const Portfolio: React.FC = () => {
       <h3 className="text-3xl font-extrabold text-primary text-center my-8">
         Projects
       </h3>
-      <p className="text-center mb-6 text-gray-700 dark: text-text">
+      <p className="text-center mb-6 text-text">
         Here is a short showcase of some of the work that I have been involved
         with.
       </p>
@@ -41,7 +41,7 @@ const Portfolio: React.FC = () => {
           return (
             <div
               key={index}
-              className="relative group w-full h-96 bg-cover bg-center rounded-lg overflow-hidden shadow-lg transition-transform duration-300 transform "
+              className="relative group w-full h-96 bg-cover bg-center rounded-lg overflow-hidden shadow-lg transition-transform duration-300 transform"
               style={{ backgroundImage: `url(${project.image})` }}
             >
               <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black to-transparent opacity-75 z-10" />
@@ -71,7 +71,7 @@ const Portfolio: React.FC = () => {
             </div>
           );
         })}
-        <div className="col-span-full flex flex-col items-center justify-center my-4 ">
+        <div className="col-span-full flex flex-col items-center justify-center my-4">
           <Button text="See more projects" href="/projects" />
         </div>
       </div>

@@ -6,7 +6,7 @@ const FilterButton: React.FC = () => {
   const { activeFilter, setActiveFilter } = useContext(FilterContext)!;
   return (
     <>
-      <div className="flex gap-4 my-4 ">
+      <div className="flex gap-4 my-4">
         {filters.map((filter) => (
           <button
             key={filter.name}
@@ -28,7 +28,7 @@ const FilterButton: React.FC = () => {
           </button>
         ))}
       </div>
-      <p className="mt-4 text-gray-700 dark: text-text">
+      <p className="mt-4 text-text">
         {filters.find((filter) => filter.name === activeFilter)?.description}
       </p>
     </>

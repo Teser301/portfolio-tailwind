@@ -29,10 +29,10 @@ function Timeline() {
                 className={`w-8 h-8 rounded-full hover:bg-primary dark:hover:bg-primary ${
                   selectedExperience === exp
                     ? "bg-primary"
-                    : "bg-dark dark:bg-light "
+                    : "bg-dark dark:bg-light"
                 }`}
               ></div>
-              <span className="absolute mt-2 text-xs font-medium text-gray-700 dark: text-text transform -translate-y-full top-11">
+              <span className="absolute mt-2 text-xs font-medium text-text transform -translate-y-full top-11">
                 {exp.year}
               </span>
             </div>
@@ -51,7 +51,7 @@ function Timeline() {
           </p>
         </div>
       </div>
-      <div className="z-10 max-w-4xl ">
+      <div className="z-10 max-w-4xl">
         {selectedExperience.achievements?.length &&
           selectedExperience.achievements.map((achievement, index) => (
             <div
@@ -70,9 +70,7 @@ function Timeline() {
                   {achievement.title}
                 </h4>
               </div>
-              <p className="text-sm text-gray-700 dark: text-text">
-                {achievement.content}
-              </p>
+              <p className="text-sm text-text">{achievement.content}</p>
             </div>
           ))}
       </div>

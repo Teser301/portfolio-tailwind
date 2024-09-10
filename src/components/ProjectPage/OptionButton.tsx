@@ -21,7 +21,7 @@ const OptionButton: React.FC = () => {
           </button>
         ))}
       </div>
-      <p className="mt-4 text-gray-700 dark:text-text">
+      <p className="mt-4 text-text">
         {activeViewOption === "Year"
           ? "Organized by the Year it was made"
           : activeViewOption === "Company"
