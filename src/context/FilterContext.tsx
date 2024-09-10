@@ -4,8 +4,8 @@ import React, { useContext, createContext, useState, ReactNode } from "react";
 interface FilterContextProps {
   activeFilter: string;
   setActiveFilter: (filter: string) => void;
-  viewOption: string;
-  setViewOption: (option: string) => void;
+  activeViewOption: string;
+  setActiveViewOption: (option: string) => void;
 }
 
 const FilterContext = createContext<FilterContextProps | undefined>(undefined);
@@ -14,10 +14,15 @@ const FilterProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   // Filter #1. What work is it.
   const [activeFilter, setActiveFilter] = useState<string>("All");
   // Filter #2. Sort by year or company
-  const [viewOption, setViewOption] = useState<string>("Year");
+  const [activeViewOption, setActiveViewOption] = useState<string>("Year");
   return (
     <FilterContext.Provider
-      value={{ activeFilter, setActiveFilter, viewOption, setViewOption }}
+      value={{
+        activeFilter,
+        setActiveFilter,
+        activeViewOption,
+        setActiveViewOption,
+      }}
     >
       {children}
     </FilterContext.Provider>

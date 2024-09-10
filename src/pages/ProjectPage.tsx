@@ -13,14 +13,14 @@ import ProjectList from "../components/ProjectPage/ProjectList";
 import ProjectDetail from "../components/ProjectPage/ProjectDetail";
 
 const Portfolio: React.FC = () => {
-  const { activeFilter, viewOption } = useFilter();
+  const { activeFilter, activeViewOption } = useFilter();
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [expandedGroups, setExpandedGroups] = useState<string[]>([]);
 
   const groupedProjects = useGroupedProjects(
     projects,
     activeFilter,
-    viewOption
+    activeViewOption
   );
 
   // Update expanded groups. Making the dropdown visible on page visit
@@ -40,9 +40,9 @@ const Portfolio: React.FC = () => {
   };
 
   return (
-    <div className="max-w-[1440px] mx-auto min-h-screen    px-6 py-5 flex flex-col">
+    <div className="max-w-[1440px] mx-auto min-h-screen px-6 py-5 flex flex-col">
+      <ProjectIntro />
       <div className="bg-white dark:bg-gray-800 my-5 p-8">
-        <ProjectIntro />
         <FilterButton />
         <OptionButton />
       </div>
