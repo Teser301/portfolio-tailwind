@@ -1,5 +1,5 @@
 import React from "react";
-import { recommendations } from "../data/recommendationData";
+import { recommendations } from "../../data/recommendationData";
 
 const RecommendationCard: React.FC = () => {
   return (
