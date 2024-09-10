@@ -2,7 +2,7 @@ import React from "react";
 import Button from "../Basic/Button";
 const AboutMe: React.FC = () => {
   return (
-    <div className="relative  p-12 md:p-24 ">
+    <div className="relative  p-12 md:p-24">
       <div className="relative z-10 flex flex-col md:flex-row items-center justify-center">
         <img
           src="https://via.placeholder.com/300"
@@ -12,7 +12,7 @@ const AboutMe: React.FC = () => {
         <div className="text-center md:text-left">
           <h1 className="text-5xl font-bold text-primary mb-6">About Me</h1>
           <p className="text-2xl text-primary mb-4">
-            Hi, I'm <span className="font-semibold ">Carlo Aavekukk</span>, a
+            Hi, I'm <span className="font-semibold">Carlo Aavekukk</span>, a
             passionate Front-End Developer.
           </p>
           <p className="text-lg text-text mb-8">

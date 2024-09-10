@@ -12,7 +12,7 @@ const Aboutcontent: React.FC<AboutcontentProps> = ({
   description,
 }) => {
   return (
-    <div className="max-w-[1440px] my-5 w-full bg-backgroundPrimary shadow-lg rounded-lg p-8 ">
+    <div className="max-w-[1440px] my-5 w-full bg-backgroundPrimary shadow-lg rounded-lg p-8">
       <div className="flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-8">
         {imgSrc && (
           <div className="flex-shrink-0">

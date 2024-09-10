@@ -2,7 +2,7 @@ import { skills } from "../../data/skillsData";
 
 const LandingSkills = () => {
   return (
-    <div className="my-4  ">
+    <div className="my-4">
       <div>
         <h3 className="text-3xl font-extrabold text-primary text-center my-8">
           Skills
@@ -11,12 +11,12 @@ const LandingSkills = () => {
           {skills.map((skill, index) => (
             <div
               key={index}
-              className="flex flex-col items-center p-4 rounded-lg shadow-lg bg-backgroundSecondary  w-full max-w-72 transition-all duration-300 transform  hover:shadow-2xl hover:scale-105 hover:rotate-1"
+              className="flex flex-col items-center p-4 rounded-lg shadow-lg bg-backgroundSecondary w-full max-w-72 transition-all duration-300 transform  hover:shadow-2xl hover:scale-105 hover:rotate-1"
             >
               <img
                 src={skill.logo}
                 alt={skill.name}
-                className="w-16 h-16 mb-2 "
+                className="w-16 h-16 mb-2"
               />
               <p className="text-lg font-medium text-text">{skill.name}</p>
             </div>

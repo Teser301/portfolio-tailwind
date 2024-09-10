@@ -17,7 +17,7 @@ const skills = [
 
 const LandingHeader: React.FC = () => {
   return (
-    <div className="flex flex-col md:flex-row ">
+    <div className="flex flex-col md:flex-row">
       <div className="md:w-[800px] max-w-3xl flex flex-col pl-20 md:pl-40 pr-20 py-20 justify-center order-2 md:order-1">
         <h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight sm:text-center md:text-5xl lg:text-6xl text-primary">
           Looking for a front-end developer?
