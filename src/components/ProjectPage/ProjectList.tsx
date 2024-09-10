@@ -46,7 +46,7 @@ const ProjectList: React.FC<ProjectListProps> = ({
                       {project.title}
                     </h4>
                     {project.status.toLowerCase().includes("online") && (
-                      <MdOpenInNew />
+                      <MdOpenInNew className="text-dark dark:text-light" />
                     )}
                   </li>
                 ))}

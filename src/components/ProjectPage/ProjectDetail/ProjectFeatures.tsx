@@ -6,11 +6,9 @@ interface ProjectFeaturesProps {
 
 const ProjectFeatures: React.FC<ProjectFeaturesProps> = ({ features }) => {
   return (
-    <div className="my-4">
-      <h3 className="text-lg font-semibold text-gray-700 dark:text-text">
-        Features:
-      </h3>
-      <ul className="list-disc list-inside text-gray-600 dark:text-gray-400 mt-2">
+    <div className="my-4 text-text">
+      <h3 className="text-lg font-semibold">Features:</h3>
+      <ul className="list-disc list-inside mt-2">
         {features.map((feature, index) => (
           <li key={index}>{feature}</li>
         ))}
