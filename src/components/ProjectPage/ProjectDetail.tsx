@@ -1,8 +1,8 @@
 import React from "react";
 import { Project } from "../../types/project";
-import ProjectFeatures from "../ProjectDetail/ProjectFeatures";
-import ProjectStatus from "../ProjectDetail/ProjectStatus";
-import ProjectTags from "../ProjectDetail/ProjectTags";
+import ProjectFeatures from "./ProjectDetail/ProjectFeatures";
+import ProjectStatus from "./ProjectDetail/ProjectStatus";
+import ProjectTags from "./ProjectDetail/ProjectTags";
 interface ProjectDetailProps {
   selectedProject: Project | null;
 }

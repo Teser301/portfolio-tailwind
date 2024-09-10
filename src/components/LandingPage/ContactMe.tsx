@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "./Basic/Button";
+import Button from "../Basic/Button";
 interface ContactMeProps {
   email: string;
   buttonText: string;
