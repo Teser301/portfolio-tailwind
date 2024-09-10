@@ -1,47 +1,19 @@
 import React, { useContext } from "react";
 import { FilterContext } from "../../context/FilterContext";
-import ReactLogo from "../../assets/icons/react.svg";
-import Wordpress from "../../assets/icons/wordpress.svg";
-import Handlebars from "../../assets/icons/handlebars.svg";
-
-const filters = [
-  {
-    name: "All",
-    icon: null,
-    description: "Showing all projects.",
-  },
-  {
-    name: "React",
-    icon: ReactLogo,
-    description: "Displaying projects built with React.",
-  },
-  {
-    name: "PHP",
-    icon: Wordpress,
-    description:
-      "Here are the projects developed using PHP, mainly with Wordpress",
-  },
-  {
-    name: "Handlebars",
-    icon: Handlebars,
-    description:
-      "These projects utilize Handlebars templates, mainly for BigCommerce",
-  },
-];
+import { filters } from "../../data/filterData";
 
 const FilterButton: React.FC = () => {
   const { activeFilter, setActiveFilter } = useContext(FilterContext)!;
-
   return (
     <>
       <div className="flex gap-4 my-4 justify-center">
         {filters.map((filter) => (
           <button
             key={filter.name}
-            className={`flex flex-col items-center justify-center px-6 py-3 rounded-lg shadow-md transition-transform duration-200 transform hover:scale-105 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500 ${
+            className={`flex gap-2 items-center justify-center px-6 py-3 rounded-lg shadow-md transition-transform duration-200 transform hover:scale-105 hover:shadow-lg text-text ${
               activeFilter === filter.name
-                ? "bg-blue-600 text-text scale-105 dark:bg-blue-500"
-                : "bg-gray-200 dark:bg-gray-700  text-text  "
+                ? "bg-primary  scale-105 dark:bg-secondary"
+                : "bg-gray-200 dark:bg-gray-700 text-text"
             }`}
             onClick={() => setActiveFilter(filter.name)}
           >
@@ -49,7 +21,7 @@ const FilterButton: React.FC = () => {
               <img
                 src={filter.icon}
                 alt={filter.name}
-                className="w-5 h-5 mb-1"
+                className="w-7 h-7 mb-1 bg-background rounded-lg"
               />
             )}
             <span className="font-semibold">{filter.name}</span>
