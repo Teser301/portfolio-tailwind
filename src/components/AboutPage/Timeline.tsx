@@ -13,10 +13,9 @@ function Timeline() {
         }}
       ></div>
       <div className="z-10 w-full max-w-4xl bg-white dark:bg-gray-800 shadow-md rounded-lg p-8">
-        <h1 className="text-center text-2xl font-semibold mb-6  text-text  ">
+        <h3 className="text-3xl font-extrabold text-center text-primary my-8">
           Experience Timeline
-        </h1>
-
+        </h3>
         <div className="relative flex justify-between items-center w-full mx-auto mb-10">
           <div className="absolute h-0.5 w-full bg-gray-300 dark:bg-gray-600"></div>
 
@@ -29,8 +28,8 @@ function Timeline() {
               <div
                 className={`w-8 h-8 rounded-full border-4 ${
                   selectedExperience === exp
-                    ? "bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 border-none"
-                    : "bg-white dark:bg-gray-700 border-white dark:border-gray-800"
+                    ? "bg-primary border-none"
+                    : "bg-gray-700 dark:bg-white border-white dark:border-gray-800"
                 }`}
               ></div>
               <span className="absolute mt-2 text-xs font-medium text-gray-700 dark: text-text transform -translate-y-full top-11">
@@ -41,10 +40,10 @@ function Timeline() {
         </div>
 
         <div className="mt-4 text-center max-w-2xl mx-auto">
-          <h2 className="text-xl font-bold mb-2  text-text  ">
+          <h2 className="text-xl font-bold mb-2 text-primary">
             {selectedExperience.title}
           </h2>
-          <h3 className="text-md font-bold mb-2 text-gray-700 dark:text-gray-400">
+          <h3 className="text-md font-bold mb-2 text-secondary">
             {selectedExperience.company}
           </h3>
           <p className="text-md mb-4 text-gray-600 dark: text-text">
@@ -68,7 +67,7 @@ function Timeline() {
                       className="w-6 h-6 mr-2"
                     />
                   )}
-                  <h4 className="text-md font-semibold text-gray-800  ">
+                  <h4 className="text-md font-semibold text-primary">
                     {achievement.title}
                   </h4>
                 </div>

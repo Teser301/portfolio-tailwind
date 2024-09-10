@@ -28,14 +28,11 @@ const Aboutcontent: React.FC<AboutcontentProps> = ({
 
         <div>
           {title && (
-            <h1 className="text-4xl font-semibold mb-4 text-center md:text-left text-gray-900 dark:text-gray-100">
+            <h3 className="text-3xl font-extrabold text-primary my-8">
               {title}
-            </h1>
+            </h3>
           )}
-
-          <p className="text-gray-600 dark: text-text text-lg leading-relaxed">
-            {description}
-          </p>
+          <p className="text-text text-lg leading-relaxed">{description}</p>
         </div>
       </div>
     </div>
