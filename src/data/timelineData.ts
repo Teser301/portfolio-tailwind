@@ -3,7 +3,7 @@ import ReactLogo from "../assets/icons/react.svg";
 import HTMLLogo from "../assets/icons/html5.svg";
 import JavaScriptLogo from "../assets/icons/javascript.svg";
 import WordpressLogo from "../assets/icons/wordpress.svg";
-
+import SassLogo from "../assets/icons/sass.svg";
 export const experiences: Timeline[] = [
     {
         year: "2015",
@@ -46,7 +46,7 @@ export const experiences: Timeline[] = [
             {
                 title: "Learned Sass",
                 content: "As I worked at Webshark, we started to incorporate SCSS into our development process. It wasn't anything fully fledged but at this point, I can't imagine coding CSS without Sass.",
-                icon: WordpressLogo
+                icon: SassLogo
             },
             {
                 title: "Learned Wordpress and SCSS",
