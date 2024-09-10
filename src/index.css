@@ -6,6 +6,8 @@
   :root {
     --text: #092011;
     --background: #d8dfee;
+    --backgroundPrimary: #e3e9f4;
+    --backgroundSecondary: #f0f3fa;
     --primary: #288d4d;
     --secondary: #8bdaa7;
     --accent: #60d288;
@@ -15,6 +17,8 @@
   .dark {
     --text: #dff6e7;
     --background: #111827;
+    --backgroundPrimary: #1f2937;
+    --backgroundSecondary: #374151;
     --primary: #3dc26e;
     --secondary: #257441;
     --accent: #2d9f55;

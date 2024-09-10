@@ -11,7 +11,7 @@ interface ProjectDetailProps {
 const ProjectDetail: React.FC<ProjectDetailProps> = ({ selectedProject }) => {
   return (
     <div
-      className={`hidden md:flex flex-1 bg-white dark:bg-gray-800 p-6 shadow-md rounded-lg flex-col justify-start h-screen transition-opacity duration-500 overflow-y-auto`}
+      className={`hidden md:flex flex-1 bg-backgroundPrimary dark:bg-gray-800 p-6 shadow-md rounded-lg flex-col justify-start h-screen transition-opacity duration-500 overflow-y-auto`}
     >
       {selectedProject ? (
         <>

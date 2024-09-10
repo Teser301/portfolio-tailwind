@@ -34,7 +34,7 @@ const Portfolio: React.FC = () => {
         with.
       </p>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 sm:grid-rows-3 lg:grid-rows-2 gap-8 p-8 bg-white dark:bg-gray-800">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 sm:grid-rows-3 lg:grid-rows-2 gap-8 p-8 bg-backgroundPrimary dark:bg-gray-800">
         {projects.slice(0, 6).map((project, index) => {
           const isOnline = project.status.toLowerCase().includes("online");
           // Return Projects, so we can add consts above it without too much hassle

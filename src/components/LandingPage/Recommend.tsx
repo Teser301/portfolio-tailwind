@@ -12,7 +12,7 @@ const RecommendationCard: React.FC = () => {
         {recommendations.map((skill, index) => (
           <div
             key={index}
-            className="flex flex-col md:flex-row items-center border  rounded-lg p-8  shadow-lg max-w-4xl mx-auto border-white dark:border-gray-800 bg-white dark:bg-gray-800"
+            className="flex flex-col md:flex-row items-center border  rounded-lg p-8  shadow-lg max-w-4xl mx-auto border-backgroundPrimary dark:border-gray-800 bg-backgroundPrimary dark:bg-gray-800"
           >
             <div className="flex-shrink-0">
               <img
@@ -31,7 +31,7 @@ const RecommendationCard: React.FC = () => {
             </div>
           </div>
         ))}
-        <div className="flex flex-col w-full md:flex-row items-center justify-center border-4 border-dashed rounded-lg p-8 max-w-4xl mx-auto bg-white dark:bg-gray-800 border-gray-400 dark:border-gray-600 opacity-50">
+        <div className="flex flex-col w-full md:flex-row items-center justify-center border-4 border-dashed rounded-lg p-8 max-w-4xl mx-auto bg-backgroundPrimary  border-gray-400 dark:border-gray-600 opacity-50">
           <p className="text-lg italic text-gray-400 dark:text-gray-500 text-center">
             More recommendations coming soon...
           </p>

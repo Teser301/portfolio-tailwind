@@ -42,7 +42,7 @@ const Portfolio: React.FC = () => {
   return (
     <div className="max-w-[1440px] mx-auto min-h-screen px-6 py-5 flex flex-col">
       <ProjectIntro />
-      <div className="bg-white dark:bg-gray-800 my-5 p-8">
+      <div className="bg-backgroundPrimary dark:bg-gray-800 my-5 p-8">
         <FilterButton />
         <OptionButton />
       </div>

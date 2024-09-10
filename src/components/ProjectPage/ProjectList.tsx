@@ -35,7 +35,7 @@ const ProjectList: React.FC<ProjectListProps> = ({
                         ? () => handleProjectClick(project.link)
                         : undefined
                     }
-                    className={`flex justify-between items-center relative p-4 my-5 bg-white dark:bg-gray-800 shadow-md rounded-lg transition hover:bg-blue-100 dark:hover:bg-blue-700
+                    className={`flex justify-between items-center relative p-4 my-5 bg-backgroundPrimary dark:bg-gray-800 shadow-md rounded-lg transition hover:bg-blue-100 dark:hover:bg-blue-700
                     ${
                       project.status.toLowerCase().includes("online")
                         ? "cursor-pointer "

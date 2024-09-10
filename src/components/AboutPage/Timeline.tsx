@@ -5,14 +5,14 @@ function Timeline() {
   const [selectedExperience, setSelectedExperience] = useState(experiences[0]);
 
   return (
-    <div className="relative w-full flex flex-col items-center justify-center bg-gray-100 dark:bg-gray-900 p-6">
+    <div className="relative w-full flex flex-col items-center justify-center p-6">
       <div
         className="absolute w-full h-full bg-cover bg-center bg-no-repeat bg-blend-lighten opacity-30 transition-all duration-500"
         style={{
           backgroundImage: `url(${selectedExperience.backgroundImage})`,
         }}
       ></div>
-      <div className="z-10 w-full max-w-4xl bg-white dark:bg-gray-800 shadow-md rounded-lg p-8">
+      <div className="z-10 w-full max-w-4xl bg-backgroundPrimary shadow-md rounded-lg p-8">
         <h3 className="text-3xl font-extrabold text-center text-primary mb-8">
           Experience Timeline
         </h3>
@@ -26,10 +26,10 @@ function Timeline() {
               onClick={() => setSelectedExperience(exp)}
             >
               <div
-                className={`w-8 h-8 rounded-full border-4 ${
+                className={`w-8 h-8 rounded-full hover:bg-primary dark:hover:bg-primary ${
                   selectedExperience === exp
-                    ? "bg-primary border-none"
-                    : "bg-gray-700 dark:bg-white border-white dark:border-gray-800"
+                    ? "bg-primary"
+                    : "bg-dark dark:bg-light "
                 }`}
               ></div>
               <span className="absolute mt-2 text-xs font-medium text-gray-700 dark: text-text transform -translate-y-full top-11">
@@ -52,32 +52,29 @@ function Timeline() {
         </div>
       </div>
       <div className="z-10 max-w-4xl ">
-        {selectedExperience.achievements?.length ? (
-          <div className="mt-4">
-            {selectedExperience.achievements.map((achievement, index) => (
-              <div
-                key={index}
-                className="mb-4 p-4 bg-gray-100 dark:bg-gray-800 rounded-lg"
-              >
-                <div className="flex items-center mb-2">
-                  {achievement.icon && (
-                    <img
-                      src={achievement.icon}
-                      alt="Icon"
-                      className="w-6 h-6 mr-2"
-                    />
-                  )}
-                  <h4 className="text-md font-semibold text-primary">
-                    {achievement.title}
-                  </h4>
-                </div>
-                <p className="text-sm text-gray-700 dark: text-text">
-                  {achievement.content}
-                </p>
+        {selectedExperience.achievements?.length &&
+          selectedExperience.achievements.map((achievement, index) => (
+            <div
+              key={index}
+              className="my-4 p-4 bg-backgroundPrimary rounded-lg"
+            >
+              <div className="flex items-center mb-2">
+                {achievement.icon && (
+                  <img
+                    src={achievement.icon}
+                    alt="Icon"
+                    className="w-6 h-6 mr-2"
+                  />
+                )}
+                <h4 className="text-md font-semibold text-primary">
+                  {achievement.title}
+                </h4>
               </div>
-            ))}
-          </div>
-        ) : null}
+              <p className="text-sm text-gray-700 dark: text-text">
+                {achievement.content}
+              </p>
+            </div>
+          ))}
       </div>
     </div>
   );
