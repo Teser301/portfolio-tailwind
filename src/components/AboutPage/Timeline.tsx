@@ -13,7 +13,7 @@ function Timeline() {
         }}
       ></div>
       <div className="z-10 w-full max-w-4xl bg-white dark:bg-gray-800 shadow-md rounded-lg p-8">
-        <h3 className="text-3xl font-extrabold text-center text-primary my-8">
+        <h3 className="text-3xl font-extrabold text-center text-primary mb-8">
           Experience Timeline
         </h3>
         <div className="relative flex justify-between items-center w-full mx-auto mb-10">

@@ -12,7 +12,7 @@ const Aboutcontent: React.FC<AboutcontentProps> = ({
   description,
 }) => {
   return (
-    <div className="max-w-4xl my-5 w-full bg-white dark:bg-gray-800 shadow-lg rounded-lg p-8 transition-all duration-300 hover:shadow-2xl">
+    <div className="max-w-[1440px] my-5 w-full bg-white dark:bg-gray-800 shadow-lg rounded-lg p-8 ">
       <div className="flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-8">
         {imgSrc && (
           <div className="flex-shrink-0">
@@ -28,7 +28,7 @@ const Aboutcontent: React.FC<AboutcontentProps> = ({
 
         <div>
           {title && (
-            <h3 className="text-3xl font-extrabold text-primary my-8">
+            <h3 className="text-3xl font-extrabold text-primary mb-4">
               {title}
             </h3>
           )}

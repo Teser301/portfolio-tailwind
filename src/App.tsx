@@ -6,7 +6,7 @@ import Footer from "./components/Footer.tsx";
 
 function App() {
   return (
-    <div className="bg-background-100">
+    <div className="bg-background">
       <NavBar />
       <div className="pt-[72px]">
         <React.StrictMode>
