@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { experiences } from "../data/timelineData";
+import { experiences } from "../../data/timelineData";
 
 function Timeline() {
   const [selectedExperience, setSelectedExperience] = useState(experiences[0]);

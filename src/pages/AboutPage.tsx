@@ -1,4 +1,4 @@
-import Timeline from "../components/Timeline";
+import Timeline from "../components/AboutPage/Timeline";
 import AboutContent from "../components/AboutPage/AboutContent";
 
 function About() {
