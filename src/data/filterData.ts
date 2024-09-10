@@ -3,7 +3,7 @@ import { Filter } from "../types/filter";
 // import ReactLogo from "../assets/icons/react.svg";
 import Wordpress from "../assets/icons/wordpress.svg";
 import Handlebars from "../assets/icons/handlebars.svg";
-
+import HTML from "../assets/icons/html5.svg"
 
 export const filters: Filter[] = [
     {
@@ -27,5 +27,11 @@ export const filters: Filter[] = [
         icon: Handlebars,
         description:
             "These projects utilize Handlebars templates, mainly for BigCommerce",
+    },
+    {
+        name: "HTML",
+        icon: HTML,
+        description:
+            "A few projects that only use HTML",
     },
 ];
