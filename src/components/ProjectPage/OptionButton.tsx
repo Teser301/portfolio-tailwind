@@ -6,7 +6,7 @@ const OptionButton: React.FC = () => {
   const viewOptions = ["Year", "Company"];
   return (
     <>
-      <div className="flex gap-4  my-4">
+      <div className="flex gap-4 my-4 justify-center md:justify-start">
         {viewOptions.map((option) => (
           <button
             key={option}
@@ -21,7 +21,7 @@ const OptionButton: React.FC = () => {
           </button>
         ))}
       </div>
-      <p className="mt-4">
+      <p className="mt-4 text-center md:text-left">
         {activeViewOption === "Year"
           ? "Organized by the Year it was made"
           : activeViewOption === "Company"
