@@ -10,14 +10,16 @@ const ProjectStatus: React.FC<ProjectStatusProps> = ({ status, link }) => {
     if (status.toLowerCase().includes("online but")) {
       return "bg-yellow-100 text-yellow-800 dark:bg-yellow-700 dark:text-yellow-200";
     } else if (status.toLowerCase().includes("online")) {
-      return "bg-secondary text-text dark:bg-green-700 dark:text-green-200";
+      return "bg-secondary";
     } else {
-      return "bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-200";
+      return "bg-backgroundSecondary ";
     }
   };
 
   return (
-    <div className={`mt-4 px-3 flex justify-center ${getStatusClass()}`}>
+    <div
+      className={`mt-4 px-3 flex justify-between items-center ${getStatusClass()}`}
+    >
       <p className=" py-1 rounded">{status}</p>
       {status.toLowerCase().includes("online") && (
         <a

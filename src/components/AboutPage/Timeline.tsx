@@ -17,7 +17,7 @@ function Timeline() {
           Experience Timeline
         </h3>
         <div className="relative flex justify-between items-center w-full mx-auto mb-10">
-          <div className="absolute h-0.5 w-full bg-gray-300 dark:bg-gray-600"></div>
+          <div className="absolute h-0.5 w-full bg-gray-600"></div>
 
           {experiences.map((exp, index) => (
             <div
@@ -32,7 +32,7 @@ function Timeline() {
                     : "bg-dark dark:bg-light"
                 }`}
               ></div>
-              <span className="absolute mt-2 text-xs font-medium text-text transform -translate-y-full top-11">
+              <span className="absolute mt-2 text-xs font-medium transform -translate-y-full top-11">
                 {exp.year}
               </span>
             </div>
@@ -46,9 +46,7 @@ function Timeline() {
           <h3 className="text-md font-bold mb-2 text-secondary">
             {selectedExperience.company}
           </h3>
-          <p className="text-md mb-4 text-gray-600 dark: text-text">
-            {selectedExperience.description}
-          </p>
+          <p className="text-md mb-4 ">{selectedExperience.description}</p>
         </div>
       </div>
       <div className="z-10 max-w-4xl">
@@ -70,7 +68,7 @@ function Timeline() {
                   {achievement.title}
                 </h4>
               </div>
-              <p className="text-sm text-text">{achievement.content}</p>
+              <p className="text-sm">{achievement.content}</p>
             </div>
           ))}
       </div>

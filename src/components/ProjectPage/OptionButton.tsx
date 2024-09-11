@@ -10,10 +10,10 @@ const OptionButton: React.FC = () => {
         {viewOptions.map((option) => (
           <button
             key={option}
-            className={`flex gap-2 items-center  px-6 py-3 rounded-lg shadow-md transition-transform duration-200 transform hover:scale-105 hover:shadow-lg text-text ${
+            className={`flex gap-2 items-center  px-6 py-3 rounded-lg shadow-md transition-transform duration-200 transform hover:scale-105 hover:shadow-lg ${
               activeViewOption === option
-                ? "bg-primary text-text dark:bg-secondary"
-                : "bg-gray-200 text-text dark:bg-gray-700"
+                ? "bg-primary scale-105"
+                : "bg-backgroundSecondary "
             }`}
             onClick={() => setActiveViewOption(option)}
           >
@@ -21,7 +21,7 @@ const OptionButton: React.FC = () => {
           </button>
         ))}
       </div>
-      <p className="mt-4 text-text">
+      <p className="mt-4">
         {activeViewOption === "Year"
           ? "Organized by the Year it was made"
           : activeViewOption === "Company"

@@ -15,7 +15,7 @@ const AboutMe: React.FC = () => {
             Hi, I'm <span className="font-semibold">Carlo Aavekukk</span>, a
             passionate Front-End Developer.
           </p>
-          <p className="text-lg text-text mb-8">
+          <p className="text-lg mb-8">
             I have been a developer for over 5+ years, focusing on front-end
             development with expertise in technologies like React, PHP, and
             modern CSS frameworks. I enjoy coding and all its technicalities and

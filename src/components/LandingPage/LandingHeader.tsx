@@ -27,7 +27,7 @@ const LandingHeader: React.FC = () => {
             const Icon = skill.icon;
             return (
               <div key={index} className="flex flex-col items-center">
-                <Icon className="text-4xl text-text mb-2" />
+                <Icon className="text-4xl mb-2" />
               </div>
             );
           })}

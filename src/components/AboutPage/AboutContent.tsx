@@ -32,7 +32,7 @@ const Aboutcontent: React.FC<AboutcontentProps> = ({
               {title}
             </h3>
           )}
-          <p className="text-text text-lg leading-relaxed">{description}</p>
+          <p className="text-lg leading-relaxed">{description}</p>
         </div>
       </div>
     </div>

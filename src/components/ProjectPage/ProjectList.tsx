@@ -19,7 +19,7 @@ const ProjectList: React.FC<ProjectListProps> = ({
           <li key={groupIndex}>
             <h3
               onClick={() => toggleGroup(group.group)}
-              className="text-2xl font-bold text-gray-800 dark:text-gray-200 mb-4 cursor-pointer hover:text-blue-600 dark:hover:text-blue-400 transition flex justify-between items-center"
+              className="flex justify-between items-center mb-4 text-2xl font-bold cursor-pointer hover:text-primary"
             >
               {group.group}
               <span className="ml-2">{isExpanded ? "−" : "+"}</span>
@@ -35,16 +35,14 @@ const ProjectList: React.FC<ProjectListProps> = ({
                         ? () => handleProjectClick(project.link)
                         : undefined
                     }
-                    className={`flex justify-between items-center relative p-4 my-5 bg-backgroundPrimary dark:bg-gray-800 shadow-md rounded-lg transition hover:bg-blue-100 dark:hover:bg-blue-700
+                    className={`flex justify-between items-center relative p-4 my-5 bg-backgroundPrimary shadow-md rounded-lg transition hover:bg-primary
                     ${
                       project.status.toLowerCase().includes("online")
                         ? "cursor-pointer "
                         : "cursor-default"
                     }`}
                   >
-                    <h4 className="text-xl font-semibold text-gray-900 dark:text-gray-100">
-                      {project.title}
-                    </h4>
+                    <h4 className="text-xl font-semibold ">{project.title}</h4>
                     {project.status.toLowerCase().includes("online") && (
                       <MdOpenInNew className="text-dark dark:text-light" />
                     )}

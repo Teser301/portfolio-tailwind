@@ -6,7 +6,7 @@ const PortfolioIntroduction: React.FC = () => {
       <h3 className="text-3xl font-extrabold text-primary text-center my-8">
         Welcome to my Projects page
       </h3>
-      <p className="text-text text-lg leading-relaxed">
+      <p className="text-lg leading-relaxed">
         Here, you'll find a diverse range of work I've completed for clients,
         companies, and personal curiosity-driven experiments. Each project
         reflects my commitment to delivering high-quality solutions, whether

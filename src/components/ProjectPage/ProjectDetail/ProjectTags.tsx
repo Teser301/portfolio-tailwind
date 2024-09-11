@@ -18,6 +18,7 @@ const ProjectTags: React.FC<ProjectTagsProps> = ({ tags }) => {
     sass: "bg-pink-100 text-pink-800 dark:bg-pink-900 dark:text-pink-300",
     bootstrap:
       "bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300",
+    typescript: "bg-blue-200 text-blue-900 dark:bg-blue-900 dark:text-blue-300",
   };
 
   return (
@@ -26,8 +27,7 @@ const ProjectTags: React.FC<ProjectTagsProps> = ({ tags }) => {
         <span
           key={index}
           className={`text-xs font-medium px-2.5 py-0.5 rounded ${
-            tagStyles[tag.toLowerCase()] ||
-            "bg-gray-100 text-gray-800 dark:bg-gray-700 dark: text-text"
+            tagStyles[tag.toLowerCase()] || "bg-background"
           }`}
         >
           {tag}

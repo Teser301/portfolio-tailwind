@@ -7,7 +7,7 @@ const LandingSkills = () => {
         <h3 className="text-3xl font-extrabold text-primary text-center my-8">
           Skills
         </h3>
-        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-8 justify-items-center p-8 border-white dark:border-gray-800 bg-backgroundPrimary dark:bg-gray-800">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-8 justify-items-center p-8 border-white dark:border-gray-800 bg-backgroundPrimary ">
           {skills.map((skill, index) => (
             <div
               key={index}
@@ -18,7 +18,7 @@ const LandingSkills = () => {
                 alt={skill.name}
                 className="w-16 h-16 mb-2"
               />
-              <p className="text-lg font-medium text-text">{skill.name}</p>
+              <p className="text-lg font-medium">{skill.name}</p>
             </div>
           ))}
         </div>

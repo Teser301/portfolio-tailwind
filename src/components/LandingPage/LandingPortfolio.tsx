@@ -29,12 +29,12 @@ const Portfolio: React.FC = () => {
       <h3 className="text-3xl font-extrabold text-primary text-center my-8">
         Projects
       </h3>
-      <p className="text-center mb-6 text-text">
+      <p className="text-center mb-6">
         Here is a short showcase of some of the work that I have been involved
         with.
       </p>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 sm:grid-rows-3 lg:grid-rows-2 gap-8 p-8 bg-backgroundPrimary dark:bg-gray-800">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 sm:grid-rows-3 lg:grid-rows-2 gap-8 p-8 bg-backgroundPrimary ">
         {projects.slice(0, 6).map((project, index) => {
           const isOnline = project.status.toLowerCase().includes("online");
           // Return Projects, so we can add consts above it without too much hassle
