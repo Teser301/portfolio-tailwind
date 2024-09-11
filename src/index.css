@@ -34,15 +34,6 @@
   }
 }
 
-a {
-  opacity: 0.8;
-  font-weight: 500;
-}
-a:hover {
-  opacity: 1;
-  text-decoration: underline;
-}
-
 /* Only using this for scrollbar as Tailwind doesnt natively support classes for it */
 .custom-scrollbar-container {
   padding: 0px 24px;
