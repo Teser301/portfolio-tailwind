@@ -6,7 +6,7 @@ const AboutMe: React.FC = () => {
       <div className="relative z-10 flex flex-col md:flex-row items-center justify-center">
         <img
           src="https://via.placeholder.com/300"
-          alt="Carlo Rossi"
+          alt="Carlo Aavekukk"
           className="w-64 h-64 md:w-80 md:h-80 object-cover rounded-lg mb-6 md:mb-0 md:mr-8"
         />
         <div className="text-center md:text-left">

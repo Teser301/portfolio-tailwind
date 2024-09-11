@@ -16,7 +16,7 @@ const Aboutcontent: React.FC<AboutcontentProps> = ({
       <div className="flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-8">
         {imgSrc && (
           <div className="flex-shrink-0">
-            <div className="w-40 h-40 md:w-52 md:h-52 overflow-hidden border-4 border-gray-200 dark:border-gray-700">
+            <div className="w-40 h-40 md:w-52 md:h-52 overflow-hidden border-4 border-backgroundSecondary">
               <img
                 src={imgSrc}
                 alt={title || "Profile Image"}
