@@ -42,3 +42,31 @@ a:hover {
   opacity: 1;
   text-decoration: underline;
 }
+
+/* Only using this for scrollbar as Tailwind doesnt natively support classes for it */
+.custom-scrollbar-container {
+  padding: 0px 24px;
+}
+
+.custom-scrollbar-container::-webkit-scrollbar {
+  width: 12px;
+}
+
+.custom-scrollbar-container::-webkit-scrollbar-track {
+  background-color: var(--backgroundSecondary);
+}
+
+.custom-scrollbar-container::-webkit-scrollbar-thumb {
+  background-color: #3dc26e; /* Primary scrollbar color */
+  border-radius: 10px;
+}
+
+.custom-scrollbar-container::-webkit-scrollbar-thumb:hover {
+  background-color: #2d598f; /* Accent color on hover */
+}
+
+/* Firefox scrollbar styles */
+.custom-scrollbar-container {
+  scrollbar-width: thin;
+  scrollbar-color: #3dc26e var(--backgroundSecondary);
+}
