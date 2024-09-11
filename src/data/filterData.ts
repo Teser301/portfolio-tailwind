@@ -1,6 +1,6 @@
 
 import { Filter } from "../types/filter";
-// import ReactLogo from "../assets/icons/react.svg";
+import ReactLogo from "../assets/icons/react.svg";
 import Wordpress from "../assets/icons/wordpress.svg";
 import Handlebars from "../assets/icons/handlebars.svg";
 import HTML from "../assets/icons/html5.svg"
@@ -11,11 +11,11 @@ export const filters: Filter[] = [
         icon: null,
         description: "Showing all projects.",
     },
-    // {
-    //   name: "React",
-    //   icon: ReactLogo,
-    //   description: "Displaying projects built with React.",
-    // },
+    {
+        name: "React",
+        icon: ReactLogo,
+        description: "Displaying projects built with React.",
+    },
     {
         name: "PHP",
         icon: Wordpress,
