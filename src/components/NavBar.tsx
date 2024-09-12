@@ -20,7 +20,7 @@ function NavBar() {
   };
 
   return (
-    <header className="fixed flex justify-between items-center p-5 w-full bg-background shadow-md z-50">
+    <header className="fixed flex justify-between items-center p-5 w-full bg-backgroundPrimary shadow-md z-50">
       <div className="flex items-center">
         <a href="/" className="flex items-center">
           <FaHome className="mr-2" />
