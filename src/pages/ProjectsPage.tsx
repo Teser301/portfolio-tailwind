@@ -1,20 +1,22 @@
 import React, { useEffect, useState } from "react";
 // Hooks/Data/Context
 import { useFilter } from "../context/FilterContext";
-import { Project } from "../types/project";
+import { ProjectType } from "../types/project";
 import { projects } from "../data/projectsData";
 import useGroupedProjects from "../hooks/useGroupedProjects";
 
 // Components
-import ProjectIntro from "../components/ProjectPage/ProjectIntro";
-import FilterButton from "../components/ProjectPage/FilterButton";
-import OptionButton from "../components/ProjectPage/OptionButton";
-import ProjectList from "../components/ProjectPage/ProjectList";
-import ProjectDetail from "../components/ProjectPage/ProjectDetail";
+import ProjectIntro from "../components/ProjectPage/ProjectsIntro";
+import FilterButton from "../components/ProjectPage/ProjectsFilterButton";
+import OptionButton from "../components/ProjectPage/ProjectsOptionButton";
+import ProjectList from "../components/ProjectPage/ProjectsList";
+import ProjectDetail from "../components/ProjectPage/Projects";
 
 const Portfolio: React.FC = () => {
   const { activeFilter, activeViewOption } = useFilter();
-  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const [selectedProject, setSelectedProject] = useState<ProjectType | null>(
+    null
+  );
   const [expandedGroups, setExpandedGroups] = useState<string[]>([]);
 
   const groupedProjects = useGroupedProjects(

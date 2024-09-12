@@ -1,4 +1,4 @@
-export type Project = {
+export type ProjectType = {
     title: string;
     shortDescription: string;
     description: string;
@@ -15,9 +15,9 @@ export type Project = {
 };
 
 export type ProjectListProps = {
-    groupedProjects: { group: string; projects: Project[] }[];
+    groupedProjects: { group: string; projects: ProjectType[] }[];
     expandedGroups: string[];
     toggleGroup: (group: string) => void;
     handleProjectClick: (link: string) => void;
-    setSelectedProject: (project: Project | null) => void;
+    setSelectedProject: (project: ProjectType | null) => void;
 };

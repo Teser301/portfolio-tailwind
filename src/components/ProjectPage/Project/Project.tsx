@@ -1,6 +1,6 @@
-import ProjectFeatures from "./../ProjectDetail/ProjectFeatures";
-import ProjectStatus from "./../ProjectDetail/ProjectStatus";
-import ProjectTags from "./../ProjectDetail/ProjectTags";
+import ProjectFeatures from "./ProjectFeatures";
+import ProjectStatus from "./ProjectStatus";
+import ProjectTags from "./ProjectTags";
 import { Project } from "../../../types/project";
 interface ProjectContentProps {
   project: Project | null;

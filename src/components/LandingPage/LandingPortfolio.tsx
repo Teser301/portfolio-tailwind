@@ -1,9 +1,9 @@
 import { projects } from "../../data/projectsData";
-import { Project } from "../../types/project";
+import { ProjectType } from "../../types/project";
 import Button from "../Basic/Button";
 
 const getTruncatedDescription = (
-  project: Project,
+  project: ProjectType,
   maxLength: number
 ): string => {
   // Use shotDescription if it is not null, undefined, or empty; otherwise, fallback to description

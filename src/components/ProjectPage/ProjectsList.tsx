@@ -1,7 +1,15 @@
 import React from "react";
-import { ProjectListProps } from "../../types/project";
 import { MdOpenInNew } from "react-icons/md";
-import { Project } from "../../types/project";
+import { ProjectType } from "../../types/project";
+
+interface ProjectListProps {
+  groupedProjects: { group: string; projects: ProjectType[] }[];
+  expandedGroups: string[];
+  toggleGroup: (group: string) => void;
+  handleProjectClick: (link: string) => void;
+  setSelectedProject: (project: ProjectType | null) => void;
+}
+
 const ProjectList: React.FC<ProjectListProps> = ({
   groupedProjects,
   expandedGroups,
@@ -10,7 +18,7 @@ const ProjectList: React.FC<ProjectListProps> = ({
   setSelectedProject,
 }) => {
   const handleProjectItemClick = (
-    project: Project,
+    project: ProjectType,
     event: React.MouseEvent
   ) => {
     // Prevent icon click event from bubbling up to project item
