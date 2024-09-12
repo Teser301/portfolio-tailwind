@@ -23,8 +23,7 @@ function NavBar() {
     <header className="fixed flex justify-between items-center p-5 w-full bg-backgroundPrimary shadow-md z-50">
       <div className="flex items-center">
         <a href="/" className="flex items-center">
-          <FaHome className="mr-2" />
-          Home
+          <FaHome className="mr-2 w-8 h-8" />
         </a>
       </div>
       <div className="flex items-center">
@@ -34,8 +33,12 @@ function NavBar() {
         <a href="/about" className="mr-4">
           About
         </a>
-        <button onClick={toggleTheme} className="p-2">
-          {theme === "dark" ? <FaSun /> : <FaMoon />}
+        <button onClick={toggleTheme} className="p-2 ">
+          {theme === "dark" ? (
+            <FaSun className="w-8 h-8" />
+          ) : (
+            <FaMoon className="w-8 h-8" />
+          )}
         </button>
       </div>
     </header>
