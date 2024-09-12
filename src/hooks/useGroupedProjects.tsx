@@ -1,13 +1,13 @@
 import { useState, useEffect } from "react";
-import { Project } from "../types/project";
+import { ProjectType } from "../types/project";
 
 type GroupedProject = {
   group: string;
-  projects: Project[];
+  projects: ProjectType[];
 };
 
 const useGroupedProjects = (
-  projects: Project[],
+  projects: ProjectType[],
   activeFilter: string,
   viewOption: string
 ): GroupedProject[] => {
@@ -22,7 +22,7 @@ const useGroupedProjects = (
     const groups = Array.from(
       new Set(
         filteredProjects.map(
-          (project) => project[groupBy as keyof Project] as string
+          (project) => project[groupBy as keyof ProjectType] as string
         )
       )
     );
@@ -30,7 +30,7 @@ const useGroupedProjects = (
     return groups.map((group) => ({
       group,
       projects: filteredProjects.filter(
-        (project) => project[groupBy as keyof Project] === group
+        (project) => project[groupBy as keyof ProjectType] === group
       ),
     }));
   };

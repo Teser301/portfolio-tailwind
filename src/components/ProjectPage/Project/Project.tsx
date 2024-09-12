@@ -1,9 +1,9 @@
 import ProjectFeatures from "./ProjectFeatures";
 import ProjectStatus from "./ProjectStatus";
 import ProjectTags from "./ProjectTags";
-import { Project } from "../../../types/project";
+import { ProjectType } from "../../../types/project";
 interface ProjectContentProps {
-  project: Project | null;
+  project: ProjectType | null;
 }
 
 const ProjectContent: React.FC<ProjectContentProps> = ({ project }) => {

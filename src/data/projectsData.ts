@@ -1,6 +1,6 @@
-import { Project } from "../types/project";
+import { ProjectType } from "../types/project";
 
-export const projects: Project[] = [
+export const projects: ProjectType[] = [
     {
         title: "Podbike - Bigcommerce",
         shortDescription: "",
