@@ -22,18 +22,33 @@ const RecommendationCard: React.FC = () => {
               />
             </div>
             <div className="flex flex-col w-full">
-              <h3 className="text-2xl font-bold text-primary ">{skill.name}</h3>
+              {skill.link ? (
+                <a
+                  href={skill.link}
+                  target="_blank"
+                  className="flex flex-col w-full"
+                >
+                  <h3 className="text-2xl font-bold text-primary cursor-pointer hover:underline">
+                    {skill.name}
+                  </h3>
+                </a>
+              ) : (
+                <h3 className="text-2xl font-bold text-primary cursor-pointer hover:underline">
+                  {skill.name}
+                </h3>
+              )}
+
               <p className="text-lg font-bold text-secondary">{skill.title}</p>
               <p className="text-xl italic my-4">"{skill.quote}"</p>
               <p className="text-lg text-right">{skill.year}</p>
             </div>
           </div>
         ))}
-        <div className="flex flex-col w-full md:flex-row items-center justify-center border-4 border-dashed rounded-lg p-8 max-w-4xl mx-auto bg-backgroundPrimary border-backgroundPrimary  opacity-50">
+        {/* <div className="flex flex-col w-full md:flex-row items-center justify-center border-4 border-dashed rounded-lg p-8 max-w-4xl mx-auto bg-backgroundPrimary border-backgroundPrimary  opacity-50">
           <p className="text-lg italic  text-center">
             More recommendations coming soon...
           </p>
-        </div>
+        </div> */}
       </div>
     </div>
   );
