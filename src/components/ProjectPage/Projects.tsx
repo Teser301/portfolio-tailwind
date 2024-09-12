@@ -13,10 +13,10 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({
 }) => {
   return (
     <>
-      {selectedProject && (
+      {selectedProject ? (
         <>
           {/*Desktop Format */}
-          <div className="hidden md:flex flex-1 flex-col justify-start sticky h-[800px] p-6 top-20 bg-backgroundPrimary shadow-md rounded-lg overflow-x-hidden  overflow-y-scroll custom-scrollbar-container">
+          <div className="hidden md:flex flex-1 flex-col justify-start sticky max-h-[800px] p-6 top-24 bg-backgroundPrimary shadow-md rounded-lg overflow-x-hidden  overflow-y-scroll custom-scrollbar-container">
             <Project project={selectedProject} />
           </div>
           {/*Mobile Format */}
@@ -32,6 +32,15 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({
             </div>
           </div>
         </>
+      ) : (
+        <div className="hidden md:flex flex-1 flex-col justify-center items-center sticky  max-h-[800px] p-6 top-24 bg-backgroundPrimary shadow-md rounded-lg">
+          <h3 className="text-2xl font-bold  text-center">
+            Select a project to view it
+          </h3>
+          <p className="text-lg mt-2">
+            Click on a project from the list to see its details!
+          </p>
+        </div>
       )}
     </>
   );
