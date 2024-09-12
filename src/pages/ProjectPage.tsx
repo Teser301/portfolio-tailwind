@@ -34,7 +34,9 @@ const Portfolio: React.FC = () => {
       prev.includes(group) ? prev.filter((g) => g !== group) : [...prev, group]
     );
   };
-
+  const handleCloseModal = () => {
+    setSelectedProject(null);
+  };
   const handleProjectClick = (link: string) => {
     window.open(link, "_blank");
   };
@@ -54,7 +56,10 @@ const Portfolio: React.FC = () => {
           handleProjectClick={handleProjectClick}
           setSelectedProject={setSelectedProject}
         />
-        <ProjectDetail selectedProject={selectedProject} />
+        <ProjectDetail
+          onClose={handleCloseModal}
+          selectedProject={selectedProject}
+        />
       </div>
     </div>
   );

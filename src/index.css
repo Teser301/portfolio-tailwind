@@ -35,9 +35,6 @@
 }
 
 /* Only using this for scrollbar as Tailwind doesnt natively support classes for it */
-.custom-scrollbar-container {
-  padding: 0px 24px;
-}
 
 .custom-scrollbar-container::-webkit-scrollbar {
   width: 12px;

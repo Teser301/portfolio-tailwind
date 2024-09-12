@@ -1,49 +1,39 @@
 import React from "react";
 import { Project } from "../../types/project";
-import ProjectFeatures from "./ProjectDetail/ProjectFeatures";
-import ProjectStatus from "./ProjectDetail/ProjectStatus";
-import ProjectTags from "./ProjectDetail/ProjectTags";
-
+import ProjectContent from "./ProjectDetail/ProjectContent";
+import { MdClose } from "react-icons/md";
 interface ProjectDetailProps {
   selectedProject: Project | null;
+  onClose: () => void; // Callback to close the modal
 }
 
-const ProjectDetail: React.FC<ProjectDetailProps> = ({ selectedProject }) => {
+const ProjectDetail: React.FC<ProjectDetailProps> = ({
+  selectedProject,
+  onClose,
+}) => {
   return (
-    <div className="hidden md:flex flex-1 flex-col justify-start sticky h-[800px]  p-6 top-20 bg-backgroundPrimary shadow-md rounded-lg">
-      {selectedProject ? (
-        <div className="flex flex-col overflow-x-hidden overflow-y-scroll custom-scrollbar-container">
-          <img
-            src={selectedProject.image}
-            alt={selectedProject.title}
-            className="w-full h-80 object-cover object-top rounded-md"
-          />
-          <ProjectStatus
-            status={selectedProject.status}
-            link={selectedProject.link}
-          />
-          <h2 className="text-2xl font-bold mt-4">{selectedProject.title}</h2>
-          <ProjectTags tags={selectedProject.type} />
-          <ProjectFeatures features={selectedProject.features} />
-          <div>
-            <h3 className="text-lg font-semibold ">Description:</h3>
-            <p className="mt-2">{selectedProject.description}</p>
+    <>
+      {selectedProject && (
+        <>
+          {/*Desktop Format */}
+          <div className="hidden md:flex flex-1 flex-col justify-start sticky h-[800px] p-6 top-20 bg-backgroundPrimary shadow-md rounded-lg overflow-x-hidden  overflow-y-scroll custom-scrollbar-container">
+            <ProjectContent project={selectedProject} />
           </div>
-
-          {selectedProject.bigFeatureTitle &&
-            selectedProject.bigFeatureDescription && (
-              <div className="mt-2">
-                <h3 className="text-lg  font-semibold">
-                  {selectedProject.bigFeatureTitle}
-                </h3>
-                <p className="mt-2">{selectedProject.bigFeatureDescription}</p>
-              </div>
-            )}
-        </div>
-      ) : (
-        <p className="text-center">Hover over a project to see its details.</p>
+          {/*Mobile Format */}
+          <div className="flex fixed inset-0 bg-black bg-opacity-50  items-center justify-center z-50 md:hidden">
+            <div className="bg-backgroundPrimary p-6 m-6 rounded-lg shadow-md  w-full relative h-4/5 overflow-y-scroll custom-scrollbar-container">
+              <button
+                onClick={onClose}
+                className="absolute top-2 right-2 p-3 bg-primary rounded-full"
+              >
+                <MdClose className="w-5 h-5" />
+              </button>
+              <ProjectContent project={selectedProject} />
+            </div>
+          </div>
+        </>
       )}
-    </div>
+    </>
   );
 };
 
