@@ -1,5 +1,6 @@
 import React from "react";
 import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
+import Socials from "./Social";
 
 const GetInTouch: React.FC = () => {
   return (
@@ -10,29 +11,10 @@ const GetInTouch: React.FC = () => {
       <p className="text-lg mb-6">
         Feel free to send me an email or reach out via my socials!
       </p>
-      <div className="flex justify-center gap-6 mb-4">
-        <a
-          href="mailto:carlo.randar.aavekukk@gmail.com"
-          className="bg-primary p-3 rounded-full  hover:bg-secondary transition"
-          aria-label="Send an email"
-        >
-          <FaEnvelope className="w-6 h-6" />
-        </a>
-
-        <a
-          href="https://www.linkedin.com/in/carlo-aavekukk-22b92b1b2/"
-          className="bg-primary p-3 rounded-full  hover:bg-secondary transition"
-          aria-label="LinkedIn"
-        >
-          <FaLinkedin className="w-6 h-6" />
-        </a>
-        <a
-          href="https://github.com/Teser301"
-          className="bg-primary p-3 rounded-full  hover:bg-secondary transition"
-          aria-label="GitHub"
-        >
-          <FaGithub className="w-6 h-6" />
-        </a>
+      <div className="flex flex-row items-center space-y-4 mb-4">
+        <Socials value="carlo.randar.aavekukk@gmail.com" icon={FaEnvelope} />
+        <Socials value="linkedin.com/in/carlo-aavekukk" icon={FaLinkedin} />
+        <Socials value="github.com/Teser301" icon={FaGithub} />
       </div>
     </div>
   );
