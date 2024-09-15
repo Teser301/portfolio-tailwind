@@ -11,7 +11,7 @@ const GetInTouch: React.FC = () => {
       <p className="text-lg mb-6">
         Feel free to send me an email or reach out via my socials!
       </p>
-      <div className="flex flex-row items-center space-y-4 mb-4">
+      <div className="flex flex-col items-center space-y-4 mb-4">
         <Socials value="carlo.randar.aavekukk@gmail.com" icon={FaEnvelope} />
         <Socials value="linkedin.com/in/carlo-aavekukk" icon={FaLinkedin} />
         <Socials value="github.com/Teser301" icon={FaGithub} />
