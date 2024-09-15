@@ -25,22 +25,20 @@ const Portfolio: React.FC = () => {
     activeViewOption
   );
 
-  // Update expanded groups. Making the dropdown visible on page visit
+  // Add all items in group to expanded list
   useEffect(() => {
     const groups = groupedProjects.map((group) => group.group);
     setExpandedGroups(groups);
   }, [groupedProjects]);
-
+  // Functionality Responsible for toggling groups from list
   const toggleGroup = (group: string) => {
     setExpandedGroups((prev) =>
       prev.includes(group) ? prev.filter((g) => g !== group) : [...prev, group]
     );
   };
+  // De-select the project when closed
   const handleCloseModal = () => {
     setSelectedProject(null);
-  };
-  const handleProjectClick = (link: string) => {
-    window.open(link, "_blank");
   };
 
   return (
@@ -55,7 +53,6 @@ const Portfolio: React.FC = () => {
           groupedProjects={groupedProjects}
           expandedGroups={expandedGroups}
           toggleGroup={toggleGroup}
-          handleProjectClick={handleProjectClick}
           setSelectedProject={setSelectedProject}
         />
         <ProjectDetail

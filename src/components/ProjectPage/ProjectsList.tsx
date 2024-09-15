@@ -6,7 +6,6 @@ interface ProjectListProps {
   groupedProjects: { group: string; projects: ProjectType[] }[];
   expandedGroups: string[];
   toggleGroup: (group: string) => void;
-  handleProjectClick: (link: string) => void;
   setSelectedProject: (project: ProjectType | null) => void;
 }
 
@@ -14,31 +13,26 @@ const ProjectList: React.FC<ProjectListProps> = ({
   groupedProjects,
   expandedGroups,
   toggleGroup,
-  handleProjectClick,
   setSelectedProject,
 }) => {
   const handleProjectItemClick = (
     project: ProjectType,
     event: React.MouseEvent
   ) => {
-    // Prevent icon click event from bubbling up to project item
     event.stopPropagation();
     // Set the selected project
     setSelectedProject(project);
   };
-
   const handleIconClick = (link: string, event: React.MouseEvent) => {
-    // Prevent the icon click event from bubbling up to project item
     event.stopPropagation();
     // Redirect to the project link
-    handleProjectClick(link);
+    window.open(link, "_blank");
   };
 
   return (
     <ul className="w-full md:w-1/3 space-y-6 overflow-auto">
       {groupedProjects.map((group, groupIndex) => {
         const isExpanded = expandedGroups.includes(group.group);
-
         return (
           <li key={groupIndex}>
             <h3
