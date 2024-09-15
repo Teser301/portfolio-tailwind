@@ -22,7 +22,9 @@ const FilterButton: React.FC = () => {
               <img
                 src={filter.icon}
                 alt={filter.name}
-                className="w-6 h-6 mb-1 bg-background rounded-lg"
+                className={`w-6 h-6 mb-1 rounded-lg ${
+                  filter.name === "Handlebars" && "bg-background"
+                }`}
               />
             )}
             <span className="font-semibold text-sm md:text-base">
