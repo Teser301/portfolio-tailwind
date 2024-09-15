@@ -11,37 +11,50 @@ const useGroupedProjects = (
   activeFilter: string,
   viewOption: string
 ): GroupedProject[] => {
-  const filteredProjects =
-    activeFilter === "All"
-      ? projects
-      : projects.filter((project) => project.type.includes(activeFilter));
-  const groupProjects = (viewOption: string): GroupedProject[] => {
+  // Function to filter projects based on the active filter
+  const filterProjects = (
+    projects: ProjectType[],
+    filter: string
+  ): ProjectType[] => {
+    if (filter === "All") return projects;
+    return projects.filter((project) => project.type.includes(filter));
+  };
+
+  // Function to group filtered projects based on the view option
+  const groupProjects = (
+    projects: ProjectType[],
+    viewOption: string
+  ): GroupedProject[] => {
     const groupBy = viewOption === "Year" ? "yearDate" : "company";
 
-    // Ensuring that the group is always a string
+    // Create a unique set of groups
     const groups = Array.from(
       new Set(
-        filteredProjects.map(
+        projects.map(
           (project) => project[groupBy as keyof ProjectType] as string
         )
       )
     );
 
+    // Group projects by the selected criteria
     return groups.map((group) => ({
       group,
-      projects: filteredProjects.filter(
+      projects: projects.filter(
         (project) => project[groupBy as keyof ProjectType] === group
       ),
     }));
   };
 
+  // State to hold the grouped projects
   const [groupedProjects, setGroupedProjects] = useState<GroupedProject[]>(
-    groupProjects(viewOption)
+    groupProjects(filterProjects(projects, activeFilter), viewOption)
   );
 
+  // Effect to update the grouped projects when the filter or view option changes
   useEffect(() => {
-    setGroupedProjects(groupProjects(viewOption));
-  }, [activeFilter, viewOption]);
+    const filtered = filterProjects(projects, activeFilter);
+    setGroupedProjects(groupProjects(filtered, viewOption));
+  }, [activeFilter, viewOption, projects]);
 
   return groupedProjects;
 };

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 // Hooks/Data/Context
-import { useFilter } from "../context/FilterContext";
+import { useFilter } from "../hooks/useFilter";
 import { ProjectType } from "../types/project";
 import { projects } from "../data/projectsData";
 import useGroupedProjects from "../hooks/useGroupedProjects";
