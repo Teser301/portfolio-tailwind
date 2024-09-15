@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { FaMoon, FaSun, FaHome } from "react-icons/fa"; // Import FaHome for the Home icon
+import { FaMoon, FaSun, FaHome } from "react-icons/fa";
 
 function NavBar() {
   const [theme, setTheme] = useState(
@@ -22,18 +22,30 @@ function NavBar() {
   return (
     <header className="fixed flex justify-between items-center p-5 w-full bg-backgroundPrimary shadow-md z-50">
       <div className="flex items-center">
-        <a href="/" className="flex items-center">
+        <a
+          href="/"
+          className="flex items-center transition-transform duration-300 hover:scale-110 hover:text-primary p-2  rounded"
+        >
           <FaHome className="mr-2 w-8 h-8" />
         </a>
       </div>
       <div className="flex items-center">
-        <a href="/projects" className="mr-4">
+        <a
+          href="/projects"
+          className="mr-4 transition-colors duration-300 hover:text-primary"
+        >
           Projects
         </a>
-        <a href="/about" className="mr-4">
+        <a
+          href="/about"
+          className="mr-4 transition-colors duration-300 hover:text-primary"
+        >
           About
         </a>
-        <button onClick={toggleTheme} className="p-2 ">
+        <button
+          onClick={toggleTheme}
+          className="p-2 transition-transform duration-300 hover:scale-110 hover:text-primary"
+        >
           {theme === "dark" ? (
             <FaSun className="w-8 h-8" />
           ) : (
