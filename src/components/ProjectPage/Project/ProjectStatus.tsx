@@ -10,27 +10,31 @@ const ProjectStatus: React.FC<ProjectStatusProps> = ({ status, link }) => {
     if (status.toLowerCase().includes("online but")) {
       return "bg-yellow-100 text-yellow-800 dark:bg-yellow-700 dark:text-yellow-200";
     } else if (status.toLowerCase().includes("online")) {
-      return "bg-secondary";
+      return "bg-primary text-white";
     } else {
-      return "bg-backgroundSecondary ";
+      return "bg-backgroundSecondary text-white";
     }
   };
 
   return (
-    <div
-      className={`mt-4 px-3 flex justify-between items-center ${getStatusClass()}`}
-    >
-      <p className=" py-1 rounded">{status}</p>
-      {status.toLowerCase().includes("online") && (
-        <a
-          href={link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block py-1 text-blue-600 dark:text-blue-400 hover:underline"
-        >
-          View Project
-        </a>
-      )}
+    <div>
+      <div
+        className={`my-4 px-3 flex flex-col justify-between items-center ${getStatusClass()}`}
+      >
+        <p className="py-1 rounded">{status}</p>
+      </div>
+      <div className="flex">
+        {status.toLowerCase().includes("online") && (
+          <a
+            href={link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full py-2 px-4 text-center rounded-md shadow-md transition-colors duration-300 bg-accent text-white hover:bg-secondary"
+          >
+            View Project
+          </a>
+        )}
+      </div>
     </div>
   );
 };
