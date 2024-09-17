@@ -12,30 +12,22 @@ const Aboutcontent: React.FC<AboutcontentProps> = ({
   description,
 }) => {
   return (
-    <div className="max-w-[1440px] my-5 w-full bg-backgroundPrimary shadow-lg rounded-lg p-8">
-      <div className="flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-8">
-        {imgSrc && (
-          <div className="flex-shrink-0">
-            <div className="w-40 h-40 md:w-52 md:h-52 overflow-hidden border-4 border-backgroundSecondary">
-              <img
-                src={imgSrc}
-                alt={title || "Profile Image"}
-                className="w-full h-full object-cover transform transition-all duration-300 hover:scale-105"
-              />
-            </div>
-          </div>
-        )}
-
-        <div>
-          {title && (
-            <h3 className="text-3xl font-extrabold text-primary mb-4">
-              {title}
-            </h3>
+    <section className="bg-backgroundPrimary text-text py-12 px-6 md:px-12 lg:px-24">
+      <div className="max-w-4xl mx-auto bg-backgroundSecondary shadow-lg rounded-lg overflow-hidden">
+        {/* Image on top */}
+        <div className="flex flex-col items-center p-6">
+          {imgSrc && (
+            <img
+              src={imgSrc}
+              alt={title || "Profile Image"}
+              className="rounded-full w-56 h-56 md:w-72 md:h-72 object-cover border-4 border-accent mb-6"
+            />
           )}
-          <p className="text-lg leading-relaxed">{description}</p>
+          <h2 className="text-4xl font-semibold text-primary mb-4">{title}</h2>
+          <p className="leading-relaxed text-center px-4">{description}</p>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
