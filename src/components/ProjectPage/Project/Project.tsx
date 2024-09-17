@@ -24,12 +24,12 @@ const ProjectContent: React.FC<ProjectContentProps> = ({ project }) => {
             <h3 className="text-lg font-semibold ">Description:</h3>
             <p className="mt-2">{project.description}</p>
           </div>
-          {project.bigFeatureTitle && project.bigFeatureDescription && (
+          {project.highlightTitle && project.highlightDescription && (
             <div className="mt-2">
               <h3 className="text-lg font-semibold">
-                {project.bigFeatureTitle}
+                {project.highlightTitle}
               </h3>
-              <p className="mt-2">{project.bigFeatureDescription}</p>
+              <p className="mt-2">{project.highlightDescription}</p>
             </div>
           )}
         </div>

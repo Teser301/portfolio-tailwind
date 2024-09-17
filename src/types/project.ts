@@ -1,6 +1,5 @@
 export type ProjectType = {
     title: string;
-    shortDescription: string;
     description: string;
     link: string;
     image: string;
@@ -10,8 +9,8 @@ export type ProjectType = {
     status: string;
     statusDate: string | null;
     features: string[];
-    bigFeatureTitle: string | null;
-    bigFeatureDescription: string | null;
+    highlightTitle: string | null;
+    highlightDescription: string | null;
 };
 
 export type ProjectListProps = {

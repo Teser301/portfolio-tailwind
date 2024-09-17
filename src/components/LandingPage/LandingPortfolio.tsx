@@ -6,8 +6,7 @@ const getTruncatedDescription = (
   project: ProjectType,
   maxLength: number
 ): string => {
-  // Use shotDescription if it is not null, undefined, or empty; otherwise, fallback to description
-  const description = project.shortDescription?.trim() || project.description;
+  const description = project.description;
 
   if (description.length <= maxLength) return description;
 
@@ -38,14 +37,14 @@ const Portfolio: React.FC = () => {
         with.
       </p>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 sm:grid-rows-3 lg:grid-rows-2 gap-8 p-8 bg-backgroundPrimary rounded-lg">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 sm:grid-rows-3 lg:grid-rows-2 gap-8 p-8 bg-backgroundPrimary shadow-md rounded-lg">
         {projects.slice(0, 6).map((project, index) => {
           const isOnline = project.status.toLowerCase().includes("online");
           // Return Projects, so we can add consts above it without too much hassle
           return (
             <div
               key={index}
-              className="relative group w-full h-96 bg-cover bg-center rounded-lg overflow-hidden shadow-lg transition-transform duration-300 transform"
+              className="relative group w-full h-96 bg-cover bg-center rounded-lg overflow-hidden shadow-md transition-transform duration-300 transform"
               style={{ backgroundImage: `url(${project.image})` }}
             >
               <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black to-transparent opacity-75 z-10" />
