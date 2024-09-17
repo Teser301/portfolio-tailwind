@@ -12,7 +12,7 @@ function Timeline() {
           backgroundImage: `url(${selectedExperience.backgroundImage})`,
         }}
       ></div>
-      <div className="z-10 w-full max-w-4xl bg-backgroundPrimary shadow-md rounded-lg p-8">
+      <div className="z-10 w-full max-w-4xl bg-backgroundSecondary shadow-md rounded-lg p-8">
         <h3 className="text-3xl font-extrabold text-center text-primary mb-8">
           Experience Timeline
         </h3>
@@ -27,9 +27,7 @@ function Timeline() {
             >
               <div
                 className={`w-8 h-8 rounded-full hover:bg-primary dark:hover:bg-primary ${
-                  selectedExperience === exp
-                    ? "bg-primary"
-                    : "bg-dark dark:bg-light"
+                  selectedExperience === exp ? "bg-primary" : "bg-secondary"
                 }`}
               ></div>
               <span className="absolute mt-2 text-xs font-medium transform -translate-y-full top-11">
@@ -54,7 +52,7 @@ function Timeline() {
           selectedExperience.achievements.map((achievement, index) => (
             <div
               key={index}
-              className="my-4 p-4 bg-backgroundPrimary rounded-lg"
+              className="my-4 p-4 bg-backgroundSecondary rounded-lg"
             >
               <div className="flex items-center mb-2">
                 {achievement.icon && (
