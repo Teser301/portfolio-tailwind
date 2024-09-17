@@ -11,7 +11,7 @@ const FilterButton: React.FC = () => {
         {filters.map((filter) => (
           <button
             key={filter.name}
-            className={`flex gap-2 items-center px-4 py-2 rounded-lg shadow-md transition-transform duration-200 transform hover:scale-105 hover:shadow-lg ${
+            className={`flex gap-2 items-center px-4 py-2 rounded-lg shadow-md transition-transform duration-200 transform hover:scale-105 hover:shadow-md ${
               activeFilter === filter.name
                 ? "bg-primary scale-105"
                 : "bg-backgroundSecondary"

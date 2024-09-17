@@ -12,7 +12,7 @@ const RecommendationCard: React.FC = () => {
         {recommendations.map((skill, index) => (
           <div
             key={index}
-            className="flex flex-col md:flex-row items-center rounded-lg p-8 shadow-lg max-w-4xl mx-auto  border border-backgroundPrimary bg-backgroundPrimary "
+            className="flex flex-col md:flex-row items-center rounded-lg p-8 shadow-md max-w-4xl mx-auto  border border-backgroundPrimary bg-backgroundPrimary "
           >
             <div className="flex-shrink-0">
               <img

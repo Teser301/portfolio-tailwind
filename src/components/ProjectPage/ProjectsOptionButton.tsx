@@ -10,7 +10,7 @@ const OptionButton: React.FC = () => {
         {viewOptions.map((option) => (
           <button
             key={option}
-            className={`flex gap-2 items-center  px-6 py-3 rounded-lg shadow-md transition-transform duration-200 transform hover:scale-105 hover:shadow-lg ${
+            className={`flex gap-2 items-center  px-6 py-3 rounded-lg shadow-md transition-transform duration-200 transform hover:scale-105 hover:shadow-md ${
               activeViewOption === option
                 ? "bg-primary scale-105"
                 : "bg-backgroundSecondary "
