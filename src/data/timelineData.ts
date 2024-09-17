@@ -14,7 +14,7 @@ export const experiences: Timeline[] = [
         company: "Tallinna Polütehnikum",
         backgroundImage: "./assets/polu.jpg",
         description:
-            "I embarked on my coding journey while studying multimedia at Tallinna Polütehnikum. My focus was on front-end development, where I learnt the very basics of HTML and CSS. Admitedly some of the content was rather easy since the year before I studied to become a front-end developer. Nevertheless, this was the start of something greater.",
+            "I embarked on my coding journey while studying multimedia at Tallinna Polütehnikum. My focus was on front-end development, where I learned the very basics of HTML and CSS. Admittedly, some of the content was rather easy since the year before I studied to become a front-end developer. Nonetheless, it marked the beginning of something greater.",
         achievements: [
             {
                 title: "First Full-Fledged Coding Endeavor",
@@ -23,12 +23,12 @@ export const experiences: Timeline[] = [
             },
             {
                 title: "Learned HTML",
-                content: "Through various school projects, we learned the basic fundamentals of HTML",
+                content: "Learned the fundamentals of HTML through various school projects.",
                 icon: HTMLLogo
             },
             {
                 title: "Learned CSS",
-                content: "Can't learn HTML without also learning a bit of CSS. I would include Javascript aswell but it was rather lackluster at this stage",
+                content: "Learned CSS alongside HTML. I would include Javascript although exposure at this stage was minimal.",
                 icon: CssLogo
             }
         ]
@@ -48,7 +48,7 @@ export const experiences: Timeline[] = [
             },
             {
                 title: "Started Early",
-                content: "While on my Linkedin it says that I started in 2017, offically I actually did a early internship starting as early as 2016. This really helped boost my education as I was applying everything I was learning to my real work.",
+                content: "Although my LinkedIn shows that I started in 2017, I actually began an early internship in 2016. This experience significantly enhanced my education, as I was able to apply what I was learning directly to real-world work.",
                 icon: null
             },
             {
@@ -74,11 +74,11 @@ export const experiences: Timeline[] = [
         company: "Calashock",
         backgroundImage: "./assets/workland.jpg",
         description:
-            "Worked with a proper team to build and maintain e-shops using BigCommerce as the base. Learned the basics of React, Vue and Handlebars. Learned to communicate with clients about their needs and how best to work with their constraints",
+            "Worked with a proper team to build and maintain e-shops using BigCommerce as the base. Learned the basics of React and Handlebars. I also improved my communication skills by working closely with clients to understand their needs and navigate constraints.",
         achievements: [
             {
                 title: "Working with a fully-fledged team.",
-                content: "My previous job didn't have an expansive team, so when I was able to join calashocks remote team that had members from across the world, it was truly something else. Designers, Project managers and our own Sales team. Not to mention more developers to cooperate with.",
+                content: "My previous job didn't have a large team, so joining Calashock's remote team that had members from across the world, it was truly something else. Working alongside designers, project managers, and a dedicated sales team. Not to mention more developers to cooperate with.",
                 icon: null
             },
             {
@@ -88,12 +88,12 @@ export const experiences: Timeline[] = [
             },
             {
                 title: "Github etiquette",
-                content: "With a team of developer, I had to learn how to use github properly. This was long overdue as now, even small projects that I work alone, I make sure to start with a github repo ready to commit to for any changes.",
+                content: "With a team of developers, I had to learn how to use github properly. This was long overdue as now, even small projects that I work alone, I make sure to start with a github repo ready to commit to for any changes.",
                 icon: GithubLogo
             },
             {
                 title: "Learned React",
-                content: "While this company primarely focused their attention of Handlebars, there were a few projects where we got to use React. It's a shame that we didnt get enough projects as once I started using react, I wished it could be in every project.",
+                content: "While this company primarily focused their attention of Handlebars, there were a few projects where we got to use React. It's unfortunate that we didn't get enough React projects, as once I started using it, I wished I could use it in every project.",
                 icon: ReactLogo
             },
             {
@@ -108,16 +108,16 @@ export const experiences: Timeline[] = [
         title: "Senior front-end Developer",
         company: "Calashock",
         backgroundImage: "./assets/paavli.jpg",
-        description: "Rejoined the company. Was given the opportunity of leading projects and development process's as well as communication. Managed to lead a team for a short time.",
+        description: "Rejoined the company. Was given the opportunity of leading projects and development processes as well as communication. Had the opportunity to lead a development team.",
         achievements: [
             {
                 title: "Senior Developer",
-                content: "Because of my skillset, I was promoted to senior developer. This is where I learned what its like to lead a team and help standardize coding methods.",
+                content: "Because of my skillset, I was promoted to senior developer. This is where I learned what it’s like to lead a team and standardize coding practices.",
                 icon: null
             },
             {
                 title: "Development Lead",
-                content: "This was a time when the company was busy with multiple projects. So much so that it left a hole in the development communications. I put myself forward and helped express ideas, put forward concerns and help eleviate duties.",
+                content: "This was a time when the company was busy with multiple projects. So much so that it left a hole in the development communications. I took the initiative to express ideas, raise concerns, and alleviate duties.",
                 icon: null
             },
         ]
