@@ -12,7 +12,7 @@ const ProjectStatus: React.FC<ProjectStatusProps> = ({ status, link }) => {
     } else if (status.toLowerCase().includes("online")) {
       return "bg-primary text-white";
     } else {
-      return "bg-backgroundSecondary text-white";
+      return "bg-backgroundSecondary text-text";
     }
   };
 
