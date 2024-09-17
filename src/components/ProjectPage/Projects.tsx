@@ -20,8 +20,14 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({
             <Project project={selectedProject} />
           </div>
           {/*Mobile Format */}
-          <div className="flex fixed inset-0 bg-black bg-opacity-50  items-center justify-center z-50 md:hidden">
-            <div className="bg-backgroundPrimary p-6 m-6 rounded-lg shadow-md  w-full relative h-4/5 overflow-y-scroll custom-scrollbar-container">
+          <div
+            className="flex fixed inset-0 bg-black bg-opacity-50  items-center justify-center z-50 md:hidden"
+            onClick={onClose}
+          >
+            <div
+              className="bg-backgroundPrimary p-6 m-6 rounded-lg shadow-md  w-full relative h-4/5 overflow-y-scroll custom-scrollbar-container"
+              onClick={(e) => e.stopPropagation()}
+            >
               <button
                 onClick={onClose}
                 className="absolute top-2 right-2 p-3 bg-primary rounded-full"
