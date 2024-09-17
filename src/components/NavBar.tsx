@@ -44,6 +44,7 @@ function NavBar() {
         </a>
         <button
           onClick={toggleTheme}
+          aria-label="Toggle between Dark and Light mode"
           className="p-2 transition-transform duration-300 hover:scale-110 hover:text-primary"
         >
           {theme === "dark" ? (
