@@ -8,11 +8,9 @@ import CameraController from "./LandingHeader/CameraControl";
 
 const LandingHeader: React.FC = () => {
   return (
-    <div className="flex flex-col md:flex-row ">
-      <div className=" md:w-[800px] max-w-3xl flex flex-col pl-20 md:pl-40 pr-20 py-20 justify-center order-2 md:order-1">
-        <Header />
-      </div>
-      <div className="w-full h-[800px] overflow-hidden order-1 md:order-2">
+    <div className="relative flex flex-col md:flex-row ">
+      <Header />
+      <div className="order-2 overflow-hidden py-20 md:py-20 xl:py-0 w-full absolute md:relative pointer-events-none md:pointer-events-auto opacity-40 md:opacity-100 h-[600px] lg:h-[700px] ">
         <Canvas camera={{ fov: 175, position: [0, 1, 5] }} shadows>
           <ambientLight intensity={2} />
           <OfficeModel />
