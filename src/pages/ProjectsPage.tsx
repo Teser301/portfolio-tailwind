@@ -6,11 +6,12 @@ import { projects } from "../data/projectsData";
 import useGroupedProjects from "../hooks/useGroupedProjects";
 
 // Components
-import ProjectIntro from "../components/ProjectPage/ProjectsIntro";
 import FilterButton from "../components/ProjectPage/ProjectsFilterButton";
 import OptionButton from "../components/ProjectPage/ProjectsOptionButton";
 import ProjectList from "../components/ProjectPage/ProjectsList";
 import ProjectDetail from "../components/ProjectPage/Projects";
+
+import Title from "../components/Basic/Heading";
 
 const Portfolio: React.FC = () => {
   const { activeFilter, activeViewOption } = useFilter();
@@ -43,7 +44,15 @@ const Portfolio: React.FC = () => {
 
   return (
     <div className="max-w-[1440px] mx-auto min-h-screen px-6 my-5 flex flex-col">
-      <ProjectIntro />
+      <Heading
+        tag="h3"
+        text=" Welcome to my Projects page"
+        subheading="Here, you'll find a diverse range of work I've completed for clients,
+        companies, and personal curiosity-driven experiments. Each project
+        reflects my commitment to delivering high-quality solutions, whether
+        it's through building dynamic web applications, crafting engaging user
+        experiences, or exploring the latest technologies."
+      />
       <div className="bg-backgroundPrimary my-5 p-8 shadow-md rounded-lg">
         <FilterButton />
         <OptionButton />
