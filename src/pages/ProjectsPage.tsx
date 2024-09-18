@@ -11,7 +11,7 @@ import OptionButton from "../components/ProjectPage/ProjectsOptionButton";
 import ProjectList from "../components/ProjectPage/ProjectsList";
 import ProjectDetail from "../components/ProjectPage/Projects";
 
-import Title from "../components/Basic/Heading";
+import Heading from "../components/Basic/Heading";
 
 const Portfolio: React.FC = () => {
   const { activeFilter, activeViewOption } = useFilter();
