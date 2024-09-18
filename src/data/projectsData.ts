@@ -1,11 +1,33 @@
 import { ProjectType } from "../types/project";
+// Importing images to make it easier to apply changes should the need arise
+import Podbike from "/assets/img/projects/podbike.jpg"
+import Purrform from "/assets/img/projects/Purrform.jpg"
+import Davidoff from "/assets/img/projects/Davidoff.jpg"
+import Fisherhawaii from "/assets/img/projects/fisherhawaii.jpg"
+import Jockofuel from "/assets/img/projects/jockofuel.jpg"
+import Fullycharged from "/assets/img/projects/fullycharged.jpg"
+import Quickcrop from "/assets/img/projects/quickcrop.jpg"
+import Kimbo from "/assets/img/projects/kimbo.jpg"
+import Vanillavalley from "/assets/img/projects/vanillavalley.jpg"
+import Petworld from "/assets/img/projects/petworld.jpg"
+import Beetbox from "/assets/img/projects/beetbox.jpg"
+import Colourbyte from "/assets/img/projects/colourbyte.jpg"
+import Goldenband from "/assets/img/projects/goldenband.jpg"
+import Calashock from "/assets/img/projects/calashock.jpg"
+import Pallas from "/assets/img/projects/pallas.jpg"
+import Balbiino from "/assets/img/projects/balbiino.jpg"
+import Haigekassa from "/assets/img/projects/haigekassa.jpg"
+import If from "/assets/img/projects/if.jpg"
+import Duo from "/assets/img/projects/duo.jpg"
+import Kalev from "/assets/img/projects/kalev.jpg"
+import BannerWork from "/assets/img/projects/bannerwork.jpg"
 
 export const projects: ProjectType[] = [
     {
         title: "Podbike - Bigcommerce",
         description: "Podbike became a BigCommerce project. Earlier over the years, I worked on the WordPress version. As stated, the project eventually transitioned from WordPress to BigCommerce.",
         link: "https://podbike.com/",
-        image: "./assets/img/projects/podbike.jpg",
+        image: Podbike,
         type: ["Handlebars"],
         company: "Calashock",
         yearDate: "2024",
@@ -19,7 +41,7 @@ export const projects: ProjectType[] = [
         title: "Purrform",
         description: "Purrform was a BigCommerce 'rescue' project. This meant that the company had a website in dire need of assistance, as it had been abandoned by the previous agency. Our company swooped in and helped it grow into the functional site it is now, although it still has some issues from that agency. Nevertheless, we managed to fix their styling, correct their maps so they are actually showing, fix their date-picking shipping options, and much more.",
         link: "https://www.purrform.co.uk/",
-        image: "./assets/img/projects/purrform.jpg",
+        image: Purrform,
         type: ["Handlebars"],
         company: "Calashock",
         yearDate: "2024",
@@ -33,7 +55,7 @@ export const projects: ProjectType[] = [
         title: "Davidoff",
         description: "Davidoff was a big project already in development. I was brought on to help resolve bugs and optimize the code. Davidoff specializes in cigars and cigar-related products, and we were tasked with creating a headless project for them. For this, we developed the front-end in React and connected it to the BigCommerce back-end for purchases. Overall, I can’t comment much as I was brought on to help finish it, but we did win a design award for it.",
         link: "https://us.davidoffgeneva.com/",
-        image: "./assets/img/projects/davidoff.jpg",
+        image: Davidoff,
         type: ["React", "Handlebars"],
         company: "Calashock",
         yearDate: "2024",
@@ -47,7 +69,7 @@ export const projects: ProjectType[] = [
         title: "Fisher Hawaii",
         description: "Fisher Hawaii was a BigCommerce project for a company specializing in office supplies. This was also one of my first projects as a senior developer that I took on myself after returning to the company. This helped re-align my development process and lead to the project being finished however never got published for outside reasons.",
         link: "#",
-        image: "./assets/img/projects/fisherhawaii.jpg",
+        image: Fisherhawaii,
         type: ["Handlebars"],
         company: "Calashock",
         yearDate: "2023",
@@ -61,7 +83,7 @@ export const projects: ProjectType[] = [
         title: "Jocko Fuel",
         description: "Jocko Fuel was a React project designed for a company specializing in sports supplements. This project was complex as we used a system called 'Storyboards' to build on top of it. To simplify, we coded the components in React TypeScript, then the client could log onto a third party 'storyboard', access the components, and modify them as they wished. When users went to the site to purchase anything, they would be redirected to BigCommerce. The project was ambitious and complicated, but I believe we delivered a competent, albeit experimental, result.",
         link: "https://jockofuel.com/",
-        image: "./assets/img/projects/jockofuel.jpg",
+        image: Jockofuel,
         type: ["React", "TypeScript", "Handlebars", "Storyboard"],
         company: "Calashock",
         yearDate: "2022",
@@ -75,7 +97,7 @@ export const projects: ProjectType[] = [
         title: "Fully Charged",
         description: "Fully Charged was a BigCommerce project developed for a company specializing in bicycles and bicycle equipment. This project was quite exhausting, featuring over 20+ widgets that the client could manage and organize to provide the best content without needing coding knowledge.",
         link: "https://www.fullycharged.com/",
-        image: "./assets/img/projects/fullycharged.jpg",
+        image: Fullycharged,
         type: ["Handlebars"],
         company: "Calashock",
         yearDate: "2022",
@@ -89,7 +111,7 @@ export const projects: ProjectType[] = [
         title: "Quickcrop",
         description: "Quickcrop was a BigCommerce project developed by other team members before I was brought in to finalize a few changes and get it ready for launch. The company handles gardening and gardening accessories.",
         link: "https://www.quickcrop.ie/",
-        image: "./assets/img/projects/quickcrop.jpg",
+        image: Quickcrop,
         type: ["Handlebars"],
         company: "Calashock",
         yearDate: "2022",
@@ -103,7 +125,7 @@ export const projects: ProjectType[] = [
         title: "Kimbo UK",
         description: "Kimbo was a BigCommerce project developed as a solo endeavor by me. I had previously worked with Kimbo in 2021, helping them with a site transition from WordPress. Once that was done, they returned in 2022 for a proper BigCommerce website. This website was modular, allowing the user to slide and add cards from the UI on the admin panel to create content. It was an enjoyable experience and mirrored some of the techniques used in React development.",
         link: "https://kimbo.co.uk/",
-        image: "./assets/img/projects/kimbo.jpg",
+        image: Kimbo,
         type: ["Handlebars"],
         company: "Calashock",
         yearDate: "2022",
@@ -117,7 +139,7 @@ export const projects: ProjectType[] = [
         title: "Vanilla Valley",
         description: "Vanilla Valley was a BigCommerce project developed by me and another developer. I admittedly came in late and focused on helping fix JavaScript issues the site had. The company specializes in cakes and related products (e.g., boxes, cake dummies, food coloring, boards, cards). I proposed solutions that helped speed up the process of getting the site live and provided insights to clients and our team about issues with certain plugins, including a search functionality that kept mismatching content from the filter.",
         link: "https://thevanillavalley.co.uk/",
-        image: "./assets/img/projects/vanillavalley.jpg",
+        image: Vanillavalley,
         type: ["Handlebars"],
         company: "Calashock",
         yearDate: "2022",
@@ -131,7 +153,7 @@ export const projects: ProjectType[] = [
         title: "Petworld Direct",
         description: "Petworld Direct was a multi-stage BigCommerce project. The company specialized in various products, with this specific sector focusing on food products for cats. The project was developed by me and another developer and was later reused by the Horkan Group for their other sites, such as 'Horkan's Garden Centre.'",
         link: "https://petworlddirect.ie/",
-        image: "./assets/img/projects/petworld.jpg",
+        image: Petworld,
         type: ["Handlebars"],
         company: "Calashock",
         yearDate: "2022",
@@ -145,7 +167,7 @@ export const projects: ProjectType[] = [
         title: "Beetbox",
         description: "Beetbox was one of the first projects where I got to fully utilize React. Beetbox was supposed to be a food delivery website, offering pre-made foods daily so users wouldn’t have to cook and could save money on healthy foods. This required coding reactive elements that could be updated with images, prices, text, etc., on a weekly or monthly basis. Unfortunately, the project never finished. I believe this was due to BigCommerce integration issues and the project’s scope getting out of hand.",
         link: "#",
-        image: "./assets/img/projects/beetbox.jpg",
+        image: Beetbox,
         type: ["React", "Handlebars"],
         company: "Calashock",
         yearDate: "2021",
@@ -159,7 +181,7 @@ export const projects: ProjectType[] = [
         title: "Podbike - Wordpress",
         description: "Podbike was a WordPress project developed by the company. After finishing their homepage, I was reassigned to handle this project. The website was in a dire state as it had been done by an agency with limited knowledge. Our company hired a few developers to get it afloat. After addressing major issues, I managed to get the site to a semi-functional state. Unfortunately, the company had already declared it a lost cause and later switched to BigCommerce in 2024.",
         link: "#",
-        image: "./assets/img/projects/podbike.jpg",
+        image: Podbike,
         type: ["PHP", "Handlebars"],
         company: "Calashock",
         yearDate: "2021",
@@ -173,7 +195,7 @@ export const projects: ProjectType[] = [
         title: "Colourbyte",
         description: "Colourbyte, a project underway before my arrival, focused on a company specializing in printers and related products. Although I did not lead this initiative, I contributed by developing a product calculator and implementing a badge system to display product status. I also supported the team by addressing bugs and resolving issues. I helped deliver the website as older team members moved on to newer projects.",
         link: "https://colourbyte.co.uk/",
-        image: "./assets/img/projects/colourbyte.jpg",
+        image: Colourbyte,
         type: ["Handlebars"],
         company: "Calashock",
         yearDate: "2021",
@@ -187,7 +209,7 @@ export const projects: ProjectType[] = [
         title: "Sharon's Organic Market",
         description: "Sharon's Organic Market, internally known as 'Goldeband,' was a company specializing in food products. This project, one of my initial assignments at Calashock, involved using the BigCommerce Stencil. Unlike my previous roles focused on bug fixes and minor revisions, this was a solo endeavor that I completed in just two weeks.",
         link: "#",
-        image: "./assets/img/projects/goldenband.jpg",
+        image: Goldenband,
         type: ["Handlebars"],
         company: "Calashock",
         yearDate: "2021",
@@ -201,7 +223,7 @@ export const projects: ProjectType[] = [
         title: "Calashock",
         description: "My first project at Calashock was leading the development of their home website. I built it using WordPress and SASS, focusing on creating a sleek, responsive design to attract new clients and showcase the company's portfolio. As my first major project, it was a valuable learning experience in managing deadlines and communicating effectively with clients (who were my employer). While I’m proud of the final product, in hindsight, I would have approached some aspects differently. For example, I would have challenged certain client requests, as some features were rarely used or quickly altered after launch. Additionally, I would have prioritized adding a dark mode option to reduce eye strain on the bright interface.",
         link: "https://www.calashock.com/",
-        image: "./assets/img/projects/calashock.jpg",
+        image: Calashock,
         type: ["PHP", "SASS"],
         company: "Calashock",
         yearDate: "2021",
@@ -215,7 +237,7 @@ export const projects: ProjectType[] = [
         title: "Pallas Art",
         description: "One of the few projects I worked on at Webshark involved making a website with a coworker using WordPress, SASS, and JS. The design was very different from a regular website, intended for an art school. We had to think of how to make the submenu feature work, where going to one page would open a new menu for subpages, and so on. In the end, I think we managed to strike a good balance, but looking back, I think we should have opted for something more usable instead of the esoteric design it now has.",
         link: "https://pallasart.ee/sisseastumine/",
-        image: "./assets/img/projects/pallas.jpg",
+        image: Pallas,
         type: ["PHP", "SASS"],
         company: "Webshark",
         yearDate: "2020",
@@ -229,7 +251,7 @@ export const projects: ProjectType[] = [
         title: "Balbiino - Landing Page",
         description: "This was a landing page for a company advertising their summer beach festival. I used HTML, SASS, and basic JS to create it.",
         link: "#",
-        image: "./assets/img/projects/balbiino.jpg",
+        image: Balbiino,
         type: ["HTML", "CSS"],
         company: "Webshark",
         yearDate: "2019",
@@ -243,7 +265,7 @@ export const projects: ProjectType[] = [
         title: "Haigekassa",
         description: "This project was for 'Haigekassa,' specifically the Estonian Healthcare agency, which was running a campaign to encourage users to 'move.' This was a duo project with another developer, and we used HTML, CSS, and Bootstrap. It featured a calculator and pages detailing the stories of brave individuals with disabilities who still manage to get out and 'move.' and a few more features",
         link: "#",
-        image: "./assets/img/projects/haigekassa.jpg",
+        image: Haigekassa,
         type: ["HTML", "CSS", "Bootstrap"],
         company: "Webshark",
         yearDate: "2019",
@@ -257,7 +279,7 @@ export const projects: ProjectType[] = [
         title: "IF",
         description: "This was one of the more forgettable projects. If I recall correctly, we were assigned to create a template for an insurance company called 'IF.' There isn’t much to say other than it was a bog-standard website.",
         link: "#",
-        image: "./assets/img/projects/if.jpg",
+        image: If,
         type: ["HTML", "SASS"],
         company: "Webshark",
         yearDate: "2018",
@@ -271,7 +293,7 @@ export const projects: ProjectType[] = [
         title: "Duo Lofts",
         description: "One of the first websites we worked on at Webshark was designed for a 'hotel-like' business where they would sell/rent lofts. Unfortunately, this was also the first project where we learned the hard way that we need planning. When I was assigned, I misunderstood the assignment and thought it was another landing page. This was also one of the first projects where I worked with a fellow developer.",
         link: "#",
-        image: "./assets/img/projects/duo.jpg",
+        image: Duo,
         type: ["HTML", "SASS"],
         company: "Webshark",
         yearDate: "2018",
@@ -285,7 +307,7 @@ export const projects: ProjectType[] = [
         title: "Kalev - Landing Page",
         description: "One of the first landing pages I worked on was for an Estonian chocolate company called 'Kalev.' Looking through the code, I can only assume it was one of my first projects because I used Bootstrap for it. It's quite amateur to use a library like Bootstrap for a page as simple as this, but that's the sort of mistake you make when it's your first time.",
         link: "#",
-        image: "./assets/img/projects/kalev.jpg",
+        image: Kalev,
         type: ["HTML", "CSS", "Bootstrap"],
         company: "Webshark",
         yearDate: "2017",
@@ -299,7 +321,7 @@ export const projects: ProjectType[] = [
         title: "Banner Work",
         description: "As a junior developer at Webshark, a typical 'job' for me was creating banners and email templates for our clients. This was mostly grunt work that I did over the years, and it was so much that I didn’t want to bloat my projects page with every single banner. Instead, consider this a compilation of my work. From 2016 to 2020, I worked on new banners every month, with websites and landing pages being rare projects in between. This kept the business afloat and taught me a lot about CSS and modular development.",
         link: "#",
-        image: "./assets/img/projects/bannerwork.jpg",
+        image: BannerWork,
         type: ["HTML", "CSS"],
         company: "Webshark",
         yearDate: "2016",

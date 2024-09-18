@@ -7,12 +7,18 @@ import SassLogo from "/assets/icons/sass.svg";
 import GithubLogo from "/assets/icons/github.svg"
 import TypeScriptLogo from "/assets/icons/typescript.svg"
 import CssLogo from "/assets/icons/css.svg"
+
+import Polu from "/assets/img/polu.jpg"
+import Standard from "/assets/img/standard.jpg"
+import Workland from "/assets/img/workland.jpg"
+import Paavli from "/assets/img/paavli.jpg"
+
 export const experiences: Timeline[] = [
     {
         year: "2015",
         title: "Student front-end developer",
         company: "Tallinna Polütehnikum",
-        backgroundImage: "./assets/polu.jpg",
+        backgroundImage: Polu,
         description:
             "I embarked on my coding journey while studying multimedia at Tallinna Polütehnikum. My focus was on front-end development, where I learned the very basics of HTML and CSS. Admittedly, some of the content was rather easy since the year before I studied to become a front-end developer. Nonetheless, it marked the beginning of something greater.",
         achievements: [
@@ -37,7 +43,7 @@ export const experiences: Timeline[] = [
         year: "2017",
         title: "Junior front-end Developer",
         company: "Webshark",
-        backgroundImage: "./assets/standard.jpg",
+        backgroundImage: Standard,
         description:
             "Began my career making landing pages and adverts for websites. Mastered the basics of HTML, CSS and a little bit of Javascript. This was also the time I was introduced to PHP and wordpress.",
         achievements: [
@@ -72,7 +78,7 @@ export const experiences: Timeline[] = [
         year: "2021",
         title: "Front-end Developer",
         company: "Calashock",
-        backgroundImage: "./assets/workland.jpg",
+        backgroundImage: Workland,
         description:
             "Worked with a proper team to build and maintain e-shops using BigCommerce as the base. Learned the basics of React and Handlebars. I also improved my communication skills by working closely with clients to understand their needs and navigate constraints.",
         achievements: [
@@ -107,7 +113,7 @@ export const experiences: Timeline[] = [
         year: "2023",
         title: "Senior front-end Developer",
         company: "Calashock",
-        backgroundImage: "./assets/paavli.jpg",
+        backgroundImage: Paavli,
         description: "Rejoined the company. Was given the opportunity of leading projects and development processes as well as communication. Had the opportunity to lead a development team.",
         achievements: [
             {
