@@ -4,6 +4,7 @@ import { RouterProvider } from "react-router-dom";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer.tsx";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 function App() {
   return (
     <div className="bg-background text-text">
@@ -14,6 +15,7 @@ function App() {
         </React.StrictMode>
       </div>
       <Analytics />
+      <SpeedInsights />
       <Footer />
     </div>
   );
