@@ -32,13 +32,13 @@ function NavBar() {
       <div className="flex items-center">
         <a
           href="/projects"
-          className="mr-4 transition-colors duration-300 hover:text-primary"
+          className="mr-4 text-lg font-bold transition-colors duration-300 hover:text-primary"
         >
           Projects
         </a>
         <a
           href="/about"
-          className="mr-4 transition-colors duration-300 hover:text-primary"
+          className="mr-4 text-lg font-bold transition-colors duration-300 hover:text-primary"
         >
           About
         </a>
