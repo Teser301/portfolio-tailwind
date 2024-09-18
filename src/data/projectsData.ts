@@ -1,8 +1,8 @@
 import { ProjectType } from "../types/project";
 // Importing images to make it easier to apply changes should the need arise
 import Podbike from "/assets/img/projects/podbike.jpg"
-import Purrform from "/assets/img/projects/Purrform.jpg"
-import Davidoff from "/assets/img/projects/Davidoff.jpg"
+import Purrform from "/assets/img/projects/purrform.jpg"
+import Davidoff from "/assets/img/projects/davidoff.jpg"
 import Fisherhawaii from "/assets/img/projects/fisherhawaii.jpg"
 import Jockofuel from "/assets/img/projects/jockofuel.jpg"
 import Fullycharged from "/assets/img/projects/fullycharged.jpg"
