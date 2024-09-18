@@ -1,11 +1,12 @@
 import React from "react";
 import Button from "../Basic/Button";
+import Me from "/assets/img/me.jpg";
 const AboutMe: React.FC = () => {
   return (
     <div className="relative  p-12 md:p-24">
       <div className="relative z-10 flex flex-col md:flex-row items-center justify-center">
         <img
-          src="https://via.placeholder.com/300"
+          src={Me}
           alt="Carlo Aavekukk"
           className="w-64 h-64 md:w-80 md:h-80 object-cover rounded-lg mb-6 md:mb-0 md:mr-8"
         />

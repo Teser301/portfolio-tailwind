@@ -1,13 +1,14 @@
 import Timeline from "../components/AboutPage/Timeline";
 import AboutContent from "../components/AboutPage/AboutContent";
+import Me from "/assets/img/me.jpg";
 
 function About() {
   return (
     <div className=" items-center justify-center">
-      <div className="max-w-[1440px] mx-auto px-6 flex flex-col">
+      <div className="bg-backgroundPrimary max-w-[1440px] mx-auto pb-6 flex flex-col">
         <AboutContent
           title="About Me"
-          imgSrc="https://via.placeholder.com/150"
+          imgSrc={Me}
           description="Hi, I'm Carlo, a passionate front-end developer with a deep interest in technology and software. My journey has been fueled by curiosity and determination to learn every aspect of the field. While my education laid the foundation, most of what I know is self-taught, which admitedly is a struggle. I thrive more under deadlines and external expectations, as I find I work best when tackling real-world tasks, especially those with tight timelines."
         />
 
@@ -18,7 +19,7 @@ function About() {
       </div>
 
       <Timeline />
-      <div className="max-w-[1440px] mx-auto px-6 flex flex-col">
+      <div className="bg-backgroundPrimary max-w-[1440px] mx-auto pb-6 flex flex-col">
         <AboutContent
           title="Hobbies"
           description="I think like most people, we enjoy surrounding ourselves in new and exciting hobbies, at least this is the case of me as I want to basically 'learn' everything, but we don't have all the time in the world, so my hobbies won't surprise you. As you'd expect, Coding is one of them. I spend my time either building web projects to suit my needs or work on game projects so that I can learn real coding. Other hobbies also include drawing, mostly in digital media. I also have a few smaller hobbies I try to keep track of, such as 3D modeling and to a lesser extent, making music (though not much is done on that front)."
