@@ -5,7 +5,7 @@ import Me from "/assets/img/me.jpg";
 function About() {
   return (
     <div className=" items-center justify-center">
-      <div className="bg-backgroundPrimary max-w-[1440px] mx-auto pb-6 flex flex-col">
+      <div className="bg-background max-w-[1440px] mx-auto pb-6 flex flex-col">
         <AboutContent
           title="About Me"
           imgSrc={Me}
@@ -19,7 +19,7 @@ function About() {
       </div>
 
       <Timeline />
-      <div className="bg-backgroundPrimary max-w-[1440px] mx-auto pb-6 flex flex-col">
+      <div className="bg-backgroundmax-w-[1440px] mx-auto pb-6 flex flex-col">
         <AboutContent
           title="Hobbies"
           description="I think like most people, we enjoy surrounding ourselves in new and exciting hobbies, at least this is the case of me as I want to basically 'learn' everything, but we don't have all the time in the world, so my hobbies won't surprise you. As you'd expect, Coding is one of them. I spend my time either building web projects to suit my needs or work on game projects so that I can learn real coding. Other hobbies also include drawing, mostly in digital media. I also have a few smaller hobbies I try to keep track of, such as 3D modeling and to a lesser extent, making music (though not much is done on that front)."
