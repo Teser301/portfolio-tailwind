@@ -3,8 +3,8 @@ import Button from "../Basic/Button";
 import Me from "/assets/img/me.jpg";
 const AboutMe: React.FC = () => {
   return (
-    <div className="relative  p-12 md:p-24">
-      <div className="relative z-10 flex flex-col md:flex-row items-center justify-center">
+    <div className="md:p-24">
+      <div className="z-10 flex flex-col md:flex-row items-center justify-center">
         <img
           src={Me}
           alt="Carlo Aavekukk"
