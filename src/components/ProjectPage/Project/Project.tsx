@@ -14,6 +14,7 @@ const ProjectContent: React.FC<ProjectContentProps> = ({ project }) => {
           <img
             src={project.image}
             alt={project.title}
+            loading="lazy"
             className="w-full h-80 object-cover object-top rounded-md"
           />
           <ProjectStatus status={project.status} link={project.link} />
