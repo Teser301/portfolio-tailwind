@@ -24,16 +24,16 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({
             className="flex fixed inset-0 bg-black bg-opacity-50  items-center justify-center z-50 md:hidden"
             onClick={onClose}
           >
+            <button
+              onClick={onClose}
+              className="absolute top-20 right-2 p-3 bg-primary rounded-full z-50"
+            >
+              <MdClose className="w-5 h-5" />
+            </button>
             <div
               className="bg-backgroundPrimary p-6 m-6 rounded-lg shadow-md  w-full relative h-4/5 overflow-y-scroll custom-scrollbar-container"
               onClick={(e) => e.stopPropagation()}
             >
-              <button
-                onClick={onClose}
-                className="absolute top-2 right-2 p-3 bg-primary rounded-full"
-              >
-                <MdClose className="w-5 h-5" />
-              </button>
               <Project project={selectedProject} />
             </div>
           </div>

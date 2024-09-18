@@ -7,11 +7,11 @@ const FilterButton: React.FC = () => {
 
   return (
     <>
-      <div className="flex flex-wrap gap-4 my-4 justify-center md:justify-start">
+      <div className="flex flex-col md:flex-row flex-wrap gap-4 my-4 justify-center md:justify-start">
         {filters.map((filter) => (
           <button
             key={filter.name}
-            className={`flex gap-2 items-center px-4 py-2 rounded-lg shadow-md transition-transform duration-200 transform hover:scale-105 hover:shadow-md ${
+            className={`h-12 flex gap-2 items-center px-4 py-2 rounded-lg shadow-md transform transition-transform duration-200 hover:scale-105 hover:shadow-md ${
               activeFilter === filter.name
                 ? "bg-primary scale-105"
                 : "bg-backgroundSecondary"
