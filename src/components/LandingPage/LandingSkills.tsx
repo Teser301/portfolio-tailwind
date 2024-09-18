@@ -11,7 +11,7 @@ const LandingSkills = () => {
           {skills.map((skill, index) => (
             <div
               key={index}
-              className="flex flex-col items-center p-4 rounded-lg shadow-md bg-backgroundSecondary w-full max-w-72 transition-all duration-300 transform  hover:shadow-2xl hover:scale-105 hover:rotate-1"
+              className="flex flex-col items-center p-4 rounded-lg shadow-md bg-backgroundSecondary w-full max-w-72"
             >
               <img
                 src={skill.logo}
