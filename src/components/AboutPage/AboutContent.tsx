@@ -12,7 +12,7 @@ const Aboutcontent: React.FC<AboutcontentProps> = ({
   description,
 }) => {
   return (
-    <section className="bg-backgroundPrimary text-text py-12 px-6 md:px-12 lg:px-24">
+    <section className="text-text pt-6 px-6 md:px-12 lg:px-24">
       <div className="max-w-4xl mx-auto bg-backgroundSecondary shadow-md rounded-lg overflow-hidden">
         {/* Image on top */}
         <div className="flex flex-col items-center p-6">
