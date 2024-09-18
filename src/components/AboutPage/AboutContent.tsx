@@ -20,7 +20,7 @@ const Aboutcontent: React.FC<AboutcontentProps> = ({
             <img
               src={imgSrc}
               alt={title || "Profile Image"}
-              className="rounded-full w-56 h-56 md:w-72 md:h-72 object-cover border-4 border-accent mb-6"
+              className="rounded-full w-56 h-56 md:w-72 md:h-72 object-cover mb-6"
             />
           )}
           <h2 className="text-4xl font-semibold text-primary mb-4">{title}</h2>
