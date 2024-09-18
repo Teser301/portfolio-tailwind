@@ -1,4 +1,5 @@
 import React from "react";
+import Heading from "../Basic/Heading";
 
 interface AboutcontentProps {
   title?: string;
@@ -23,8 +24,13 @@ const Aboutcontent: React.FC<AboutcontentProps> = ({
               className="rounded-full w-56 h-56 md:w-72 md:h-72 object-cover mb-6"
             />
           )}
-          <h2 className="text-4xl font-semibold text-primary mb-4">{title}</h2>
-          <p className="leading-relaxed text-center px-4">{description}</p>
+          {(title || description) && (
+            <Heading
+              tag="h3"
+              text={title || ""}
+              subheading={description || ""}
+            />
+          )}
         </div>
       </div>
     </section>

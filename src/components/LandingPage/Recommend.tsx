@@ -1,13 +1,11 @@
 import React from "react";
 import { recommendations } from "../../data/recommendationData";
+import Heading from "../Basic/Heading";
 
 const RecommendationCard: React.FC = () => {
   return (
     <div className="my-4">
-      <h3 className="text-3xl font-extrabold text-primary text-center my-8">
-        Recommendations
-      </h3>
-
+      <Heading tag="h3" text="Recommendations" />
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
         {recommendations.map((skill, index) => (
           <div

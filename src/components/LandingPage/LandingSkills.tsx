@@ -1,12 +1,11 @@
 import { skills } from "../../data/skillsData";
+import Heading from "../Basic/Heading";
 
 const LandingSkills = () => {
   return (
     <div className="my-4">
       <div>
-        <h3 className="text-3xl font-extrabold text-primary text-center my-8 ">
-          Skills
-        </h3>
+        <Heading tag="h3" text="Skills" />
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-8 justify-items-center p-8 bg-backgroundPrimary shadow-md rounded-lg">
           {skills.map((skill, index) => (
             <div

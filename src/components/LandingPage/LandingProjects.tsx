@@ -1,6 +1,7 @@
 import { projects } from "../../data/projectsData";
 import { ProjectType } from "../../types/project";
 import Button from "../Basic/Button";
+import Heading from "../Basic/Heading";
 
 const getTruncatedDescription = (
   project: ProjectType,
@@ -35,14 +36,12 @@ const Portfolio: React.FC = () => {
 
   return (
     <div className="my-4">
-      <h3 className="text-3xl font-extrabold text-primary text-center my-8">
-        Projects
-      </h3>
-      <p className="text-center mb-6">
-        Here is a short showcase of some of the work that I have been involved
-        with.
-      </p>
-
+      <Heading
+        tag="h3"
+        text="Projects"
+        subheading=" Here is a short showcase of some of the work that I have been involved
+        with."
+      />
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 sm:grid-rows-3 lg:grid-rows-2 gap-8 p-8 bg-backgroundPrimary shadow-md rounded-lg">
         {projects.slice(0, 6).map((project, index) => {
           const isOnline = project.status.toLowerCase().includes("online");
