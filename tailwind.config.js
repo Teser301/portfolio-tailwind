@@ -1,5 +1,5 @@
 export default {
-  darkMode: "class", // or 'media' if you want to use the system preference
+  darkMode: "media",
   content: ["./src/**/*.{html,js,jsx,tsx}"],
   theme: {
     extend: {
