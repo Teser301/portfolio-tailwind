@@ -1,9 +1,9 @@
 
 import { Filter } from "../types/filter";
-import ReactLogo from "../assets/icons/react.svg";
-import Wordpress from "../assets/icons/wordpress.svg";
-import Handlebars from "../assets/icons/handlebars.svg";
-import HTML from "../assets/icons/html5.svg"
+import ReactLogo from "/assets/icons/react.svg";
+import Wordpress from "/assets/icons/wordpress.svg";
+import Handlebars from "/assets/icons/handlebars.svg";
+import HTML from "/assets/icons/html5.svg"
 
 export const filters: Filter[] = [
     {

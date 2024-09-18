@@ -1,6 +1,6 @@
 import { Recommendation } from "../types/recommendation";
-import Azizi from "../assets/recommend/azizi.jpg"
-import Vincenzo from "../assets/recommend/vincenzo.jpg"
+import Azizi from "/assets/img/recommend/azizi.jpg"
+import Vincenzo from "/assets/img/recommend/vincenzo.jpg"
 
 export const recommendations: Recommendation[] = [
     {

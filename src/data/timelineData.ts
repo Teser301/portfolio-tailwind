@@ -1,12 +1,12 @@
 import { Timeline } from "../types/timeline";
-import ReactLogo from "../assets/icons/react.svg";
-import HTMLLogo from "../assets/icons/html5.svg";
-import JavaScriptLogo from "../assets/icons/javascript.svg";
-import WordpressLogo from "../assets/icons/wordpress.svg";
-import SassLogo from "../assets/icons/sass.svg";
-import GithubLogo from "../assets/icons/github.svg"
-import TypeScriptLogo from "../assets/icons/typescript.svg"
-import CssLogo from "../assets/icons/css.svg"
+import ReactLogo from "/assets/icons/react.svg";
+import HTMLLogo from "/assets/icons/html5.svg";
+import JavaScriptLogo from "/assets/icons/javascript.svg";
+import WordpressLogo from "/assets/icons/wordpress.svg";
+import SassLogo from "/assets/icons/sass.svg";
+import GithubLogo from "/assets/icons/github.svg"
+import TypeScriptLogo from "/assets/icons/typescript.svg"
+import CssLogo from "/assets/icons/css.svg"
 export const experiences: Timeline[] = [
     {
         year: "2015",
