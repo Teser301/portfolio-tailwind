@@ -1,8 +1,8 @@
 import React from "react";
-
+import Button from "../../Basic/Button";
 interface ProjectStatusProps {
   status: string;
-  link: string;
+  link: string | null;
 }
 
 const ProjectStatus: React.FC<ProjectStatusProps> = ({ status, link }) => {
@@ -24,15 +24,13 @@ const ProjectStatus: React.FC<ProjectStatusProps> = ({ status, link }) => {
         <p className="py-1 rounded">{status}</p>
       </div>
       <div className="flex">
-        {status.toLowerCase().includes("online") && (
-          <a
+        {link && (
+          <Button
+            text="View Project"
             href={link}
             target="_blank"
-            rel="noopener noreferrer"
-            className="w-full py-2 px-4 text-center rounded-md shadow-md transition-colors duration-300 bg-accent text-white hover:bg-secondary"
-          >
-            View Project
-          </a>
+            className="w-full text-center"
+          />
         )}
       </div>
     </div>

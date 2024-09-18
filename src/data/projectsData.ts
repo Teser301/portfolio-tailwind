@@ -68,7 +68,7 @@ export const projects: ProjectType[] = [
     {
         title: "Fisher Hawaii",
         description: "Fisher Hawaii was a BigCommerce project for a company specializing in office supplies. This was also one of my first projects as a senior developer that I took on myself after returning to the company. This helped re-align my development process and lead to the project being finished however never got published for outside reasons.",
-        link: "#",
+        link: null,
         image: Fisherhawaii,
         type: ["Handlebars"],
         company: "Calashock",
@@ -87,7 +87,7 @@ export const projects: ProjectType[] = [
         type: ["React", "TypeScript", "Handlebars", "Storyboard"],
         company: "Calashock",
         yearDate: "2022",
-        status: "Online but changed",
+        status: "Online but altered",
         statusDate: "28/08/2024",
         features: ["Product Listing Page", "Product Page", "Blog", "Account Page", "Storyboard page", "Account subscriptions"],
         highlightTitle: "Too much",
@@ -166,7 +166,7 @@ export const projects: ProjectType[] = [
     {
         title: "Beetbox",
         description: "Beetbox was one of the first projects where I got to fully utilize React. Beetbox was supposed to be a food delivery website, offering pre-made foods daily so users wouldn’t have to cook and could save money on healthy foods. This required coding reactive elements that could be updated with images, prices, text, etc., on a weekly or monthly basis. Unfortunately, the project never finished. I believe this was due to BigCommerce integration issues and the project’s scope getting out of hand.",
-        link: "#",
+        link: null,
         image: Beetbox,
         type: ["React", "Handlebars"],
         company: "Calashock",
@@ -180,7 +180,7 @@ export const projects: ProjectType[] = [
     {
         title: "Podbike - Wordpress",
         description: "Podbike was a WordPress project developed by the company. After finishing their homepage, I was reassigned to handle this project. The website was in a dire state as it had been done by an agency with limited knowledge. Our company hired a few developers to get it afloat. After addressing major issues, I managed to get the site to a semi-functional state. Unfortunately, the company had already declared it a lost cause and later switched to BigCommerce in 2024.",
-        link: "#",
+        link: null,
         image: Podbike,
         type: ["PHP", "Handlebars"],
         company: "Calashock",
@@ -208,7 +208,7 @@ export const projects: ProjectType[] = [
     {
         title: "Sharon's Organic Market",
         description: "Sharon's Organic Market, internally known as 'Goldeband,' was a company specializing in food products. This project, one of my initial assignments at Calashock, involved using the BigCommerce Stencil. Unlike my previous roles focused on bug fixes and minor revisions, this was a solo endeavor that I completed in just two weeks.",
-        link: "#",
+        link: null,
         image: Goldenband,
         type: ["Handlebars"],
         company: "Calashock",
@@ -241,7 +241,7 @@ export const projects: ProjectType[] = [
         type: ["PHP", "SASS"],
         company: "Webshark",
         yearDate: "2020",
-        status: "Online but changed",
+        status: "Online but altered",
         statusDate: "28/08/2024",
         features: ["Admission Page", "Language Switch", "Search Functionality", "About us"],
         highlightTitle: null,
@@ -250,7 +250,7 @@ export const projects: ProjectType[] = [
     {
         title: "Balbiino - Landing Page",
         description: "This was a landing page for a company advertising their summer beach festival. I used HTML, SASS, and basic JS to create it.",
-        link: "#",
+        link: null,
         image: Balbiino,
         type: ["HTML", "CSS"],
         company: "Webshark",
@@ -264,7 +264,7 @@ export const projects: ProjectType[] = [
     {
         title: "Haigekassa",
         description: "This project was for 'Haigekassa,' specifically the Estonian Healthcare agency, which was running a campaign to encourage users to 'move.' This was a duo project with another developer, and we used HTML, CSS, and Bootstrap. It featured a calculator and pages detailing the stories of brave individuals with disabilities who still manage to get out and 'move.' and a few more features",
-        link: "#",
+        link: null,
         image: Haigekassa,
         type: ["HTML", "CSS", "Bootstrap"],
         company: "Webshark",
@@ -278,7 +278,7 @@ export const projects: ProjectType[] = [
     {
         title: "IF",
         description: "This was one of the more forgettable projects. If I recall correctly, we were assigned to create a template for an insurance company called 'IF.' There isn’t much to say other than it was a bog-standard website.",
-        link: "#",
+        link: null,
         image: If,
         type: ["HTML", "SASS"],
         company: "Webshark",
@@ -292,7 +292,7 @@ export const projects: ProjectType[] = [
     {
         title: "Duo Lofts",
         description: "One of the first websites we worked on at Webshark was designed for a 'hotel-like' business where they would sell/rent lofts. Unfortunately, this was also the first project where we learned the hard way that we need planning. When I was assigned, I misunderstood the assignment and thought it was another landing page. This was also one of the first projects where I worked with a fellow developer.",
-        link: "#",
+        link: null,
         image: Duo,
         type: ["HTML", "SASS"],
         company: "Webshark",
@@ -306,7 +306,7 @@ export const projects: ProjectType[] = [
     {
         title: "Kalev - Landing Page",
         description: "One of the first landing pages I worked on was for an Estonian chocolate company called 'Kalev.' Looking through the code, I can only assume it was one of my first projects because I used Bootstrap for it. It's quite amateur to use a library like Bootstrap for a page as simple as this, but that's the sort of mistake you make when it's your first time.",
-        link: "#",
+        link: null,
         image: Kalev,
         type: ["HTML", "CSS", "Bootstrap"],
         company: "Webshark",
@@ -320,7 +320,7 @@ export const projects: ProjectType[] = [
     {
         title: "Banner Work",
         description: "As a junior developer at Webshark, a typical 'job' for me was creating banners and email templates for our clients. This was mostly grunt work that I did over the years, and it was so much that I didn’t want to bloat my projects page with every single banner. Instead, consider this a compilation of my work. From 2016 to 2020, I worked on new banners every month, with websites and landing pages being rare projects in between. This kept the business afloat and taught me a lot about CSS and modular development.",
-        link: "#",
+        link: null,
         image: BannerWork,
         type: ["HTML", "CSS"],
         company: "Webshark",

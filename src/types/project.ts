@@ -1,7 +1,7 @@
 export type ProjectType = {
     title: string;
     description: string;
-    link: string;
+    link: string | null;
     image: string;
     type: string[];
     company: string;

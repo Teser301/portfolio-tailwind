@@ -48,20 +48,14 @@ const ProjectList: React.FC<ProjectListProps> = ({
                   <li
                     key={projectIndex}
                     onClick={(e) => handleProjectItemClick(project, e)}
-                    className={`flex justify-between  relative my-5 bg-backgroundPrimary  group hover:bg-primary shadow-md rounded-lg transition
-                    ${
-                      project.status.toLowerCase().includes("online")
-                        ? "cursor-pointer"
-                        : "cursor-default"
-                    }
-                   `}
+                    className="flex justify-between  relative my-5 bg-backgroundPrimary  group hover:bg-primary shadow-md rounded-lg transition"
                   >
                     <h4 className="text-xl font-semibold p-4">
                       {project.title}
                     </h4>
-                    {project.status.toLowerCase().includes("online") && (
+                    {project.link && (
                       <div
-                        onClick={(e) => handleIconClick(project.link, e)}
+                        onClick={(e) => handleIconClick(project.link!, e)}
                         className="text-xl ml-4 p-4 cursor-pointer flex group-hover:bg-secondary items-center justify-center rounded-r-lg transition
                         hover:bg-secondary"
                       >

@@ -44,14 +44,18 @@ const Portfolio: React.FC = () => {
       />
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 sm:grid-rows-3 lg:grid-rows-2 gap-8 p-8 bg-backgroundPrimary shadow-md rounded-lg">
         {projects.slice(0, 6).map((project, index) => {
-          const isOnline = project.status.toLowerCase().includes("online");
-          // Return Projects, so we can add consts above it without too much hassle
           return (
             <div
               key={index}
               className="relative group w-full h-40 md:h-96 bg-cover bg-center rounded-lg overflow-hidden shadow-md transition-transform duration-300 transform"
               style={{ backgroundImage: `url(${project.image})` }}
-              onClick={() => handleClick(project.link)}
+              onClick={() => {
+                if (project.link) {
+                  handleClick(project.link);
+                } else {
+                  handleClick("/projects");
+                }
+              }}
             >
               <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black to-transparent opacity-75 z-10" />
 
@@ -66,7 +70,7 @@ const Portfolio: React.FC = () => {
                   {getTruncatedDescription(project, 200)}
                 </p>
 
-                {isOnline ? (
+                {project.link ? (
                   <Button
                     text="View Live"
                     href={project.link}
