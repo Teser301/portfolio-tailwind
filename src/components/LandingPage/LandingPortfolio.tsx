@@ -27,6 +27,12 @@ const getTruncatedDescription = (
 };
 
 const Portfolio: React.FC = () => {
+  const handleClick = (url: string) => {
+    if (window.innerWidth < 768) {
+      window.open(url, "_blank");
+    }
+  };
+
   return (
     <div className="my-4">
       <h3 className="text-3xl font-extrabold text-primary text-center my-8">
@@ -44,8 +50,9 @@ const Portfolio: React.FC = () => {
           return (
             <div
               key={index}
-              className="relative group w-full h-96 bg-cover bg-center rounded-lg overflow-hidden shadow-md transition-transform duration-300 transform"
+              className="relative group w-full h-40 md:h-96 bg-cover bg-center rounded-lg overflow-hidden shadow-md transition-transform duration-300 transform"
               style={{ backgroundImage: `url(${project.image})` }}
+              onClick={() => handleClick(project.link)}
             >
               <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black to-transparent opacity-75 z-10" />
 
@@ -55,8 +62,8 @@ const Portfolio: React.FC = () => {
                 </h2>
               </div>
 
-              <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex flex-col items-center justify-center transition-opacity duration-300 p-4 z-20">
-                <p className="text-light mb-2 text-center">
+              <div className="flex flex-col absolute inset-0 bg-black bg-opacity-50 md:opacity-0 group-hover:opacity-100 items-end md:items-center justify-end md:justify-center transition-opacity duration-300 p-4 z-20">
+                <p className="text-light mb-2 text-center hidden md:block">
                   {getTruncatedDescription(project, 200)}
                 </p>
 
