@@ -3,7 +3,7 @@ import { FaMoon, FaSun, FaHome } from "react-icons/fa";
 
 function NavBar() {
   const [theme, setTheme] = useState(
-    () => localStorage.getItem("theme") || "light"
+    () => localStorage.getItem("theme") || "dark"
   );
 
   useEffect(() => {
