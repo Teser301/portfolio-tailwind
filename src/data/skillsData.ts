@@ -7,6 +7,9 @@ import PythonLogo from "/assets/icons/python.svg";
 import TailwindLogo from "/assets/icons/tailwind.svg";
 import WordpressLogo from "/assets/icons/wordpress.svg";
 import HandlebarsLogo from "/assets/icons/handlebars.svg";
+import PhotoshopLogo from "/assets/icons/photoshop.svg";
+import IllustratorLogo from "/assets/icons/illustrator.svg";
+import BlenderLogo from "/assets/icons/blender.svg";
 
 export const skills: Skills[] = [
     {
@@ -40,5 +43,17 @@ export const skills: Skills[] = [
     {
         name: "HTML",
         logo: HTMLLogo,
+    },
+    {
+        name: "Photoshop",
+        logo: PhotoshopLogo,
+    },
+    {
+        name: "Illustrator",
+        logo: IllustratorLogo,
+    },
+    {
+        name: "Blender",
+        logo: BlenderLogo,
     },
 ];
