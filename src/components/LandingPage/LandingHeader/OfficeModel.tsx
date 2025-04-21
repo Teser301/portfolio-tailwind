@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { Mesh } from "three";
 
 const OfficeModel: React.FC = () => {
-  const model = useGLTF("dist/newroom.glb");
+  const model = useGLTF("/newroom.glb");
 
   useEffect(() => {
     model.scene.traverse((child) => {
