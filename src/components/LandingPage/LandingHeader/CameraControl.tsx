@@ -44,7 +44,7 @@ const CameraController: React.FC = () => {
   }, [size, set, originalCamera]);
 
   // Animation frame for zoom effect and drifting motion
-  useFrame((state, delta) => {
+  useFrame((_state, delta) => {
     if (orthoCameraRef.current) {
       // Handle zoom animation
       if (Math.abs(orthoCameraRef.current.zoom - targetZoom) > 0.001) {
